@@ -1,1 +1,113 @@
 // Normally mainpage styles
+
+.container
+  width: 958px
+
+//atom
+.atom
+  border: 1px solid #ccc
+  padding: 15px
+  margin: 10px
+
+// variables
+$_red: #ee4415
+$_red-btn: #ef4416
+$_grey: #777
+$_white: #fff
+$_black: #000
+
+//user-menu
+.user-menu
+  background: #272727
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+
+  &__el
+    display: inline-flex
+    color: $_grey
+    font-family: 'lato'
+    font-size: 14px
+    text-transform: uppercase
+    padding: 10px 20px
+    border-left: 1px solid #333
+
+    &:hover
+      color: $_red
+
+//general-menu
+.general-menu
+  background: #1E1E1E
+  display: flex
+  flex-direction: row
+
+  &__el
+    display: inline-flex
+    padding: 10px 20px
+
+  &__link
+    color: $_white
+    font-family: 'lato'
+    font-size: 15px
+    text-transform: uppercase
+
+
+    &:hover
+      color: $_red
+
+    &_active
+      color: $_red
+      border-bottom: 3px solid #ee4415
+
+  &__ico
+    color: $_grey
+
+    &:hover
+      color: $_white
+
+//logo
+.logo
+  &__img
+    background-image: url(..img/logo-goshop.png)
+
+//btn
+.btn
+  background: $_red-btn
+  color: $_white
+  font-family: 'lato'
+  font-size: 14px
+  font-weight: 500
+  text-transform: uppercase
+  padding: 10px 32px
+  border-radius: 30px
+  cursor: pointer
+
+  &:hover
+    background: #1e1e1e
+
+  &:focus
+    outline: none
+
+  &_subscribe
+    padding: 10px 170px
+    text-transform: none
+    border-radius: 0
+
+  &_cross
+    border-radius: 0
+    background: $_red-btn
+    width: 60px
+    height: 60px
+    color: $_white
+
+//drop-down
+.drop-down
+  
+  &__img
+    background: url(../img/dropdown_newsletter.jpg) no-repeat $_black
+
+
+
+
+
+
