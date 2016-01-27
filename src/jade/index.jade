@@ -18,8 +18,8 @@ block content
 						li.user-menu__el
 							a.user-menu__link my account
 						li.user-menu__el my cart
+							span.user-menu__count 0
 						li.user-menu__el.border-right checkout
-
 	//END top-line
 
 	//BEGIN header
@@ -46,4 +46,46 @@ block content
 							a.general-menu__link.general-menu__link_border blog
 						li.general-menu__el
 							i.general-menu__ico.fa.fa-search
+				span.btn.btn_nav
+					i.fa.fa-reorder
+					|navigation
+
 	//END header
+
+	.promo
+		img(src="/img/promo_goshop_1.png")
+		.promo__in
+			img(src="/img/promo_goshop_2.png")
+			img(src="/img/promo_goshop_3.png")
+			a(href="#")
+				span.btn.btn_find find your bike
+
+	.banner
+		ul.banner__list
+			li.banner__el
+				.item-banner
+					img(src="/img/banner_1.png").item-banner__img
+					.item-banner__descr
+						h2.item-banner__title men
+							span.item-banner__price $350
+							p.item-banner__text Bikes, Clothing, and many more...
+							.item-banner__buy
+								span.btn shop now
+			li.banner__el
+				.item-banner
+					img(src="/img/banner_02.png").item-banner__img
+					.item-banner__descr
+						h2.item-banner__title women
+							span.item-banner__price $250
+							p.item-banner__text Bikes, Clothing, Accessories and many more...
+							.item-banner__buy
+								span.btn shop now
+			li.banner__el
+				.item-banner
+					img(src="/img/banner_03.png").item-banner__img
+					.item-banner__descr
+						h2.item-banner__title bike’s
+							span.item-banner__price $550
+							p.item-banner__text All Famous Bike Brands
+							.item-banner__buy
+								span.btn shop now

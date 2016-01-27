@@ -39,7 +39,7 @@ $_dark-black: #1E1E1E
   flex-direction: row
   justify-content: space-between
   cursor: pointer
-  +r(580)
+  +r(610)
     flex-wrap: wrap
     justify-content: center
 
@@ -51,7 +51,7 @@ $_dark-black: #1E1E1E
     text-transform: uppercase
     padding: 10px 20px
     border-left: 1px solid #333
-    +r(580)
+    +r(610)
       border: none
 
     &:hover
@@ -70,10 +70,12 @@ $_dark-black: #1E1E1E
   background: #1E1E1E
   display: flex
   flex-direction: row
+  +r(1024)
+    display: none
 
   &__el
     display: inline-flex
-    margin-left: 35px
+    margin-left: 33px
 
   &__link
     color: $_white
@@ -109,6 +111,8 @@ $_dark-black: #1E1E1E
 
 //logo
 .logo
+  +r(768)
+    margin-bottom: 15px
   &__link
     display: inline-block
 
@@ -156,12 +160,14 @@ $_dark-black: #1E1E1E
       color: $_white
 
   &_nav
-    //display: none
+    display: none
     width: 100%
     color: $_white
     background-color: $_orange
     padding: 9px 14px
     border-radius: 2px
+    +r(1024)
+      display: flex
 
     &:hover
       background-color: $_orange
@@ -169,8 +175,6 @@ $_dark-black: #1E1E1E
     & i
       display: inline-block
       margin-right: 5px
-    +r(832)
-      display: block
 
 //newsletter
 .newsletter
@@ -223,7 +227,7 @@ $_dark-black: #1E1E1E
 .subscribe
 
   &__field
-  margin: 50px 0
+    margin: 50px 0
 
   &__action
     margin: 20px 0
@@ -233,16 +237,27 @@ $_dark-black: #1E1E1E
 .header
   background-color: $_dark-black
   padding-top: 35px
-  +r(832)
-    padding-top: 0
+  +r(1024)
+    padding: 35px 15px
+
+  &__left
+    width: 30%
+    +r(768)
+      width: 100%
+
+  &__right
+    width: 70%
+    +r(768)
+      width: 100%
 
   &__in
     display: flex
     flex-direction: row
     justify-content: space-between
     align-items: center
-    +r(832)
-      padding: 45px 20px
+    +r(768)
+      flex-wrap: wrap
+      text-align: center
 
 //section-title
 .section-title
@@ -297,6 +312,77 @@ $_dark-black: #1E1E1E
     &_active
       color: #1f1f1f
 
+//banner
+.item-banner
+  position: relative
+  background: url(../img/banner_1.png) no-repeat
+
+  &__descr
+    width: 190px
+    margin-bottom: 10px
+    position: absolute
+    top: 150px
+    left: 222px
+    z-index: 2
+
+  &__title
+    font-size: 39px
+    font-weight: 800
+    color: $_white
+    text-transform: uppercase
+
+  &__price
+    font-size: 31px
+    font-weight: 300
+    color: #eef1c9
+
+  &__text
+    font-size: 17px
+    color: $_white
+
+  &__buy
+    position: absolute
+    top: 170px
+    left: 0
+
+//banner
+.banner
+
+  &__list
+    width: 100%
+
+  &__el
+    display: inline-block
+    width: 33%
+
+
+//promo
+.promo
+  position: relative
+
+  &__in
+    position: absolute
+    top: 0
+    right: 0
+
+//product
+.product
+
+  &__name
+    color: $_dark-black
+    font-size: 24px
+    font-weight: bold
+    text-transform: uppercase
+
+    &:hover
+      color: #eb4b20
+
+  &__text
+    font-size: 15px
+    color: #979797
+
+    &_orange
+      color: #ed4d21
 
 
 
