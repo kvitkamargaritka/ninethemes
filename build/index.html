@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <!--fonts-->
-    <link rel="stylesheet" media="all" href="fonts/font-awesome-4.5.0/css/font-awesome.css">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Lato:800,700,600,500,400,300">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Roboto+Slab:800,700,600,500,400,300">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Roboto:800,700,600,500,400,300">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Playball:800,700,600,500,400,300">
     <!--css-->
+    <link rel="stylesheet" media="all" href="fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" media="all" href="css/style.css">
     <script src="js/app.js"></script>
   </head>
@@ -19,11 +19,49 @@
     <!--BEGIN out-->
     <div class="out">
       <!--| Just text-->
-      <div class="out">
-        <svg class="icon icon-octa">
-          <use xlink:href="#icon-octa"></use>
-        </svg>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, ipsum maxime, tempora deserunt minima suscipit voluptatem possimus ratione inventore eveniet autem esse accusamus eos quibusdam consequuntur quia officiis eum! Et!
+      <!--BEGIN top-line-->
+      <div class="top-line">
+        <div class="container">
+          <div class="user-menu">
+            <div class="user-menu__left">
+              <ul class="user-menu__list">
+                <li class="user-menu__el">us dollar</li>
+                <li class="user-menu__el border-right">english</li>
+              </ul>
+            </div>
+            <div class="user-menu__right">
+              <ul class="user-menu__list">
+                <li class="user-menu__el"><a class="user-menu__link">my account</a></li>
+                <li class="user-menu__el">my cart</li>
+                <li class="user-menu__el border-right">checkout</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
+      <!--END top-line-->
+      <!--BEGIN header-->
+      <header class="header">
+        <div class="header__in container">
+          <div class="header__left">
+            <div class="logo"><a href="#" class="logo__link"><img src="img/logo-goshop.png"></a></div>
+          </div>
+          <div class="header__right">
+            <nav class="general-menu">
+              <ul class="general-menu__list">
+                <li class="general-menu__el"><a class="general-menu__link general-menu__link_active">home</a></li>
+                <li class="general-menu__el"><a class="general-menu__link">bike</a></li>
+                <li class="general-menu__el"><a class="general-menu__link">clothing</a></li>
+                <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">components</a></li>
+                <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">accessories</a></li>
+                <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">blog</a></li>
+                <li class="general-menu__el"><i class="general-menu__ico fa fa-search"></i></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!--END header-->
     </div>
     <!--END out-->
   </body>

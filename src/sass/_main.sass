@@ -1,7 +1,11 @@
-// Normally mainpage styles
-
+//body
+body
+  font-size: 14px
+  font-family: 'lato'
+//container
 .container
-  width: 958px
+  max-width: 958px
+  margin: 0 auto
 
 //atom
 .atom
@@ -9,19 +13,35 @@
   padding: 15px
   margin: 10px
 
+//border-right
+.border-right
+  border-right: 1px solid #333
+
+
 // variables
-$_red: #ee4415
-$_red-btn: #ef4416
+$_orange: #ee4415
+$_orange-btn: #ef4416
 $_grey: #777
+$_grey-btn: #2C2C2C
 $_white: #fff
 $_black: #000
+$_dark-black: #1E1E1E
+
+//top-line
+.top-line
+  background: #272727
+
 
 //user-menu
 .user-menu
   background: #272727
   display: flex
   flex-direction: row
-  justify-content: space-around
+  justify-content: space-between
+  cursor: pointer
+  +r(580)
+    flex-wrap: wrap
+    justify-content: center
 
   &__el
     display: inline-flex
@@ -31,9 +51,19 @@ $_black: #000
     text-transform: uppercase
     padding: 10px 20px
     border-left: 1px solid #333
+    +r(580)
+      border: none
 
     &:hover
-      color: $_red
+      color: $_orange
+
+  &__count
+    display: inline-block
+    margin-left: 6px
+    padding: 0 6px 1px 6px
+    border: 1px solid #333333
+    border-radius: 2px
+    transition: all 0.2s
 
 //general-menu
 .general-menu
@@ -43,23 +73,35 @@ $_black: #000
 
   &__el
     display: inline-flex
-    padding: 10px 20px
+    margin-left: 35px
 
   &__link
     color: $_white
     font-family: 'lato'
     font-size: 15px
     text-transform: uppercase
-
+    padding: 6px 0 35px 0
+    border-bottom: 3px solid transparent
+    transition: all 0.2s ease-in
+    cursor: pointer
 
     &:hover
-      color: $_red
+      color: $_orange
 
     &_active
-      color: $_red
+      color: $_orange
       border-bottom: 3px solid #ee4415
 
+    &_border
+
+      &:hover
+        border-bottom: 3px solid #ee4415
+
   &__ico
+    display: inline-block
+    position: relative
+    top: -2px
+    left: -2px
     color: $_grey
 
     &:hover
@@ -67,12 +109,14 @@ $_black: #000
 
 //logo
 .logo
-  &__img
-    background-image: url(..img/logo-goshop.png)
+  &__link
+    display: inline-block
+
 
 //btn
 .btn
-  background: $_red-btn
+  display: inline-block
+  background: $_orange-btn
   color: $_white
   font-family: 'lato'
   font-size: 14px
@@ -80,6 +124,7 @@ $_black: #000
   text-transform: uppercase
   padding: 10px 32px
   border-radius: 30px
+  transition: all 0.2s ease-in
   cursor: pointer
 
   &:hover
@@ -94,17 +139,174 @@ $_black: #000
     border-radius: 0
 
   &_cross
+    position: absolute
+    top: 0
+    right: 0
     border-radius: 0
-    background: $_red-btn
-    width: 60px
-    height: 60px
+    font-size: 25px
     color: $_white
 
-//drop-down
-.drop-down
-  
-  &__img
-    background: url(../img/dropdown_newsletter.jpg) no-repeat $_black
+  &_gray
+    background-color: $_grey-btn
+    color: #999
+    border: 1px solid #666
+
+    &:hover
+      background-color: #666
+      color: $_white
+
+  &_nav
+    //display: none
+    width: 100%
+    color: $_white
+    background-color: $_orange
+    padding: 9px 14px
+    border-radius: 2px
+
+    &:hover
+      background-color: $_orange
+
+    & i
+      display: inline-block
+      margin-right: 5px
+    +r(832)
+      display: block
+
+//newsletter
+.newsletter
+  position: relative
+  background-image: url(../img/bg_newsletter.jpg)
+  width: 870px
+  color: $_white
+  padding: 50px 60px
+  margin: 40px 0
+  //height: 500px
+
+  &__in
+    text-align: center
+    padding: 95px 0 55px 0
+
+  &__title
+    font-size: 48px
+    font-weight: bold
+    text-transform: uppercase
+    color: $_white
+
+  &__descr
+    color: $_white
+    font-size: 15px
+    font-weight: bold
+    padding: 5px 0 0 0
+
+    &_red
+      color: $_orange
+      font-weight: normal
+
+//input
+.input
+
+  &:focus
+    outline: none
+
+  &__field
+    width: 400px
+    height: 40px
+    padding-left: 20px
+    border: 1px solid rgba(255, 255, 255, .3)
+    background-color: $_black
+    font-family: lato
+    font-size: 13px
+    font-weight: 500
+    color: #b6b6b6
+
+//subscribe
+.subscribe
+
+  &__field
+  margin: 50px 0
+
+  &__action
+    margin: 20px 0
+    position: relative
+
+//header
+.header
+  background-color: $_dark-black
+  padding-top: 35px
+  +r(832)
+    padding-top: 0
+
+  &__in
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+    +r(832)
+      padding: 45px 20px
+
+//section-title
+.section-title
+  background: url(../img/bg-heading.png) no-repeat top
+  text-align: center
+  padding: 40px 0 0 0
+
+  &__text
+    font-size: 34px
+    font-weight: 800
+    color: #202020
+    text-transform: uppercase
+
+    &_orange
+      color: $_orange
+
+  &__descr
+    color: #929292
+    font-family: lato
+
+  &__ico
+    color: $_orange-btn
+    font-size: 22px
+
+//filter-menu
+.filter-menu
+
+  &__el
+    display: inline-block
+    padding: 0 3px
+
+    &:first-child
+
+      &:before
+        content: ''
+
+    &:before
+      content: '•'
+      color: #929292
+      display: inline-block
+      padding-top: 2px
+      padding-left: 4px
+      padding-right: 10px
+
+  &__text
+    text-transform: uppercase
+    color: #929292
+    font-size: 15px
+    font-weight: 600
+    cursor: pointer
+
+    &_active
+      color: #1f1f1f
+
+
+
+
+
+
+
+
+
+
+
 
 
 

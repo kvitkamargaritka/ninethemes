@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <!--fonts-->
-    <link rel="stylesheet" media="all" href="fonts/font-awesome-4.5.0/css/font-awesome.css">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Lato:800,700,600,500,400,300">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Roboto+Slab:800,700,600,500,400,300">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Roboto:800,700,600,500,400,300">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Playball:800,700,600,500,400,300">
     <!--css-->
+    <link rel="stylesheet" media="all" href="fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" media="all" href="css/style.css">
     <script src="js/app.js"></script>
   </head>
@@ -19,32 +19,56 @@
     <!--BEGIN out-->
     <div class="out">
       <!--| Just text-->
-      <div class="atom">
-        <div class="user-menu">
-          <div class="user-menu__left">
-            <ul class="user-menu__list">
-              <li class="user-menu__el">us dollar</li>
-              <li class="user-menu__el">english</li>
-            </ul>
-          </div>
-          <div class="user-menu__right">
-            <ul class="user-menu__list">
-              <li class="user-menu__el"><a class="user-menu__link">my account</a></li>
-              <li class="user-menu__el">my cart</li>
-              <li class="user-menu__el">checkout</li>
-            </ul>
+      <div class="container">
+        <div class="atom">
+          <div class="user-menu">
+            <div class="user-menu__left">
+              <ul class="user-menu__list">
+                <li class="user-menu__el">us dollar</li>
+                <li class="user-menu__el border-right">english</li>
+              </ul>
+            </div>
+            <div class="user-menu__right">
+              <ul class="user-menu__list">
+                <li class="user-menu__el"><a class="user-menu__link">my account</a></li>
+                <li class="user-menu__el">my cart<span class="user-menu__count">0</span></li>
+                <li class="user-menu__el border-right">checkout</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+      <div class="container">
+        <div class="atom">
+          <header class="header">
+            <header__left>
+              <div class="logo"><img class="logo__img"></div>
+            </header__left>
+            <header__right>
+              <div class="general-menu">
+                <ul class="general-menu__list">
+                  <li class="general-menu__el"><a class="general-menu__link general-menu__link_active">home</a></li>
+                  <li class="general-menu__el"><a class="general-menu__link">bike</a></li>
+                  <li class="general-menu__el"><a class="general-menu__link">clothing</a></li>
+                  <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">components</a></li>
+                  <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">accessories</a></li>
+                  <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">blog</a><i class="general-menu__ico fa fa-search"></i></li>
+                </ul>
+              </div>
+            </header__right>
+          </header>
+        </div>
+      </div>
+      <div class="atom"><span class="btn btn_nav"><i class="fa fa-reorder"></i>navigation</span></div>
       <div class="atom">
         <div class="general-menu">
           <ul class="general-menu__list">
             <li class="general-menu__el"><a class="general-menu__link general-menu__link_active">home</a></li>
             <li class="general-menu__el"><a class="general-menu__link">bike</a></li>
             <li class="general-menu__el"><a class="general-menu__link">clothing</a></li>
-            <li class="general-menu__el"><a class="general-menu__link">components</a></li>
-            <li class="general-menu__el"><a class="general-menu__link">accessories</a></li>
-            <li class="general-menu__el"><a class="general-menu__link">blog</a><i class="general-menu__ico fa fa-search"></i></li>
+            <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">components</a></li>
+            <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">accessories</a></li>
+            <li class="general-menu__el"><a class="general-menu__link general-menu__link_border">blog</a><i class="general-menu__ico fa fa-search"></i></li>
           </ul>
         </div>
       </div>
@@ -54,11 +78,39 @@
       <div class="atom"><span class="btn">shop now</span></div>
       <div class="atom"><span class="btn">view all bikes</span></div>
       <div class="atom"><span class="btn">add to cart</span></div>
+      <div class="atom"><span class="btn btn_gray">discover</span></div>
+      <div class="atom"><span class="btn btn_cross"><i class="fa fa-remove"></i></span></div>
       <div class="atom">
-        <div class="drop-down"><img class="drop-down__img"></div>
+        <div class="newsletter">
+          <div class="newsletter__in">
+            <h1 class="newsletter__title">newsletter</h1>
+            <p class="newsletter__descr">Did you know that we ship to over<span class="newsletter__descr newsletter__descr_red">24 different countries</span></p>
+            <form class="subscribe">
+              <div class="subscribe__field">
+                <input placeholder="Enter your email address" class="input input__field">
+              </div>
+              <div class="subscribe__action"><span type="submit" class="btn btn_subscribe"><i class="fa fa-envelope"></i>Subscribe</span></div>
+            </form>
+          </div>
+        </div>
       </div>
-      <div class="atom"><span class="btn btn_subscribe">Subscribe</span></div>
-      <div class="atom"><span class="btn btn_cross"></span></div>
+      <div class="atom">
+        <div class="section-title">
+          <h2 class="section-title__text">choose your<span class="section-title__text_orange">bike</span></h2>
+          <p class="section-title__descr">Search by type of</p><i class="section-title__ico fa fa-angle-double-up"></i>
+        </div>
+      </div>
+      <div class="atom">
+        <div class="filter-menu">
+          <ul class="filter-menu__list">
+            <li class="filter-menu__el"><span class="filter-menu__text filter-menu__text_active">clothing</span></li>
+            <li class="filter-menu__el"><span class="filter-menu__text">bikes</span></li>
+            <li class="filter-menu__el"><span class="filter-menu__text">components</span></li>
+            <li class="filter-menu__el"><span class="filter-menu__text">accessories</span></li>
+            <li class="filter-menu__el"><span class="filter-menu__text">protections</span></li>
+          </ul>
+        </div>
+      </div>
     </div>
     <!--END out-->
   </body>

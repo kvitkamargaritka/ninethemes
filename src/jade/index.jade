@@ -4,6 +4,46 @@ block title
 	title Title of template
 
 block content
-	.out
-		+icon("octa")
-		| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, ipsum maxime, tempora deserunt minima suscipit voluptatem possimus ratione inventore eveniet autem esse accusamus eos quibusdam consequuntur quia officiis eum! Et!
+
+	//BEGIN top-line
+	.top-line
+		.container
+			.user-menu
+				.user-menu__left
+					ul.user-menu__list
+						li.user-menu__el us dollar
+						li.user-menu__el.border-right english
+				.user-menu__right
+					ul.user-menu__list
+						li.user-menu__el
+							a.user-menu__link my account
+						li.user-menu__el my cart
+						li.user-menu__el.border-right checkout
+
+	//END top-line
+
+	//BEGIN header
+	header.header
+		.header__in.container
+			.header__left
+				.logo
+					a(href="#").logo__link
+						img(src="img/logo-goshop.png")
+			.header__right
+				nav.general-menu
+					ul.general-menu__list
+						li.general-menu__el
+							a.general-menu__link.general-menu__link_active home
+						li.general-menu__el
+							a.general-menu__link bike
+						li.general-menu__el
+							a.general-menu__link clothing
+						li.general-menu__el
+							a.general-menu__link.general-menu__link_border components
+						li.general-menu__el
+							a.general-menu__link.general-menu__link_border accessories
+						li.general-menu__el
+							a.general-menu__link.general-menu__link_border blog
+						li.general-menu__el
+							i.general-menu__ico.fa.fa-search
+	//END header
