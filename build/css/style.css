@@ -101,6 +101,26 @@ body { font-size: 14px; font-family: "lato"; }
 .btn_nav { display: none; width: 100%; color: #fff; background-color: #ee4415; padding: 9px 14px; -webkit-border-radius: 2px; border-radius: 2px; }
 .btn_nav:hover { background-color: #ee4415; }
 .btn_nav i { display: inline-block; margin-right: 5px; }
+.btn_white { width: 50px; height: 50px; -webkit-border-radius: 0; border-radius: 0; background-color: #fff; color: #000; padding: 0; text-align: center; line-height: 50px; font-size: 16px; }
+.btn_white:hover { background-color: #ee4415; color: #fff; }
+.btn_cart { color: #fff; background: #ef4416; }
+
+.btn-group__el { display: inline-block; padding: 0 2px; }
+
+.items__list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+.items__el { margin: 0 13px; }
+
+.item { font-family: Roboto; }
+.item:hover .item__btn-group { display: block; }
+.item__top { margin-bottom: 20px; position: relative; }
+.item__bottom { text-align: center; }
+.item__link { text-decoration: none; }
+.item__title { font-size: 17px; font-weight: 400; text-transform: uppercase; color: #262626; margin-bottom: 10px; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in; }
+.item__title:hover { color: #ee4415; }
+.item__price { margin: 0 5px; }
+.item__price_new { color: #ee4415; }
+.item__price_old { text-decoration: line-through; color: #929292; }
+.item__btn-group { display: none; position: absolute; top: 120px; left: 50px; }
 
 .newsletter { position: relative; background-image: url(../img/bg_newsletter.jpg); width: 870px; color: #fff; padding: 50px 60px; margin: 40px 0; }
 .newsletter__in { text-align: center; padding: 95px 0 55px 0; }
@@ -125,6 +145,7 @@ body { font-size: 14px; font-family: "lato"; }
 .section-title__descr { color: #929292; font-family: Playball; font-size: 22px; padding-top: 9px; }
 .section-title__ico { color: #ef4416; font-size: 22px; }
 
+.filter-menu { text-align: center; margin: 50px 0; }
 .filter-menu__el { display: inline-block; padding: 0 3px; }
 .filter-menu__el:first-child:before { content: ""; }
 .filter-menu__el:before { content: "•"; color: #929292; display: inline-block; padding-top: 2px; padding-left: 4px; padding-right: 10px; }
@@ -155,6 +176,7 @@ body { font-size: 14px; font-family: "lato"; }
 .product__text_orange { color: #ed4d21; }
 
 .promotion { background: url(../img/promotion_1.jpg) no-repeat; height: 550px; position: relative; }
+.promotion__title { font-family: Playball; font-size: 22px; }
 .promotion__price { color: #444; font-size: 42px; font-weight: 800; text-transform: uppercase; }
 .promotion__price_orange { color: #eb4b20; font-size: 38px; }
 
@@ -165,10 +187,15 @@ body { font-size: 14px; font-family: "lato"; }
 .actions__el { display: inline-block; }
 .actions__link { text-transform: uppercase; font-size: 14px; font-weight: bold; color: #1E1E1E; text-decoration: none; }
 .actions__link:hover { color: #eb4b20; }
+
+.advance { background: url(../img/bg-mount.jpg) repeat top center scroll; height: 837px; margin-top: 90px; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+
 @media only screen and (max-width: 1270px){
  .item-banner__descr{ top: 50px; } }
+
 @media only screen and (max-width: 1024px){
  .general-menu{ display: none; }
  .btn_nav{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
@@ -178,11 +205,13 @@ body { font-size: 14px; font-family: "lato"; }
  .item-banner__title{ font-size: 30px; }
  .item-banner__price{ font-size: 22px; }
  .promo{ width: 100%; } }
+
 @media only screen and (max-width: 920px){
  .item-banner__descr{ top: 30px; }
  .item-banner__descr_center{ right: 20px; }
  .item-banner__descr_right{ left: 20px; }
  .item-banner__text{ margin-bottom: 20px; } }
+
 @media only screen and (max-width: 768px){
  .logo{ margin-bottom: 15px; }
  .header__left{ width: 100%; }
@@ -192,6 +221,7 @@ body { font-size: 14px; font-family: "lato"; }
  .item-banner__el{ width: 100%; }
  .item-banner__descr{ top: 70px; right: 40px; }
  .item-banner__text{ margin-bottom: 50px; } }
+
 @media only screen and (max-width: 610px){
  .user-menu{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
  .user-menu__el{ border: none; } }

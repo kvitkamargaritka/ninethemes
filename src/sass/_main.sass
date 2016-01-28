@@ -176,7 +176,85 @@ $_dark-black: #1E1E1E
       display: inline-block
       margin-right: 5px
 
-  &_shop
+  &_white
+    width: 50px
+    height: 50px
+    border-radius: 0
+    background-color: $_white
+    color: $_black
+    padding: 0
+    text-align: center
+    line-height: 50px
+    font-size: 16px
+    &:hover
+      background-color: $_orange
+      color: $_white
+
+  &_cart
+    color: $_white
+    background: $_orange-btn
+
+//btn-group
+.btn-group
+
+  &__el
+    display: inline-block
+    padding: 0 2px
+
+//items
+.items
+
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+  &__el
+    margin: 0 13px
+
+//item
+.item
+  font-family: Roboto
+
+  &:hover
+    .item__btn-group
+      display: block
+
+  &__top
+    margin-bottom: 20px
+    position: relative
+
+  &__bottom
+    text-align: center
+
+  &__link
+    text-decoration: none
+
+  &__title
+    font-size: 17px
+    font-weight: 400
+    text-transform: uppercase
+    color: #262626
+    margin-bottom: 10px
+    transition: all 0.2s ease-in
+
+    &:hover
+      color: $_orange
+
+  &__price
+    margin: 0 5px
+
+    &_new
+      color: $_orange
+
+    &_old
+      text-decoration: line-through
+      color: #929292
+  &__btn-group
+    display: none
+    position: absolute
+    top: 120px
+    left: 50px
 
 //newsletter
 .newsletter
@@ -288,6 +366,8 @@ $_dark-black: #1E1E1E
 
 //filter-menu
 .filter-menu
+  text-align: center
+  margin: 50px 0
 
   &__el
     display: inline-block
@@ -446,6 +526,10 @@ $_dark-black: #1E1E1E
   height: 550px
   position: relative
 
+  &__title
+    font-family: Playball
+    font-size: 22px
+
   &__price
     color: #444
     font-size: 42px
@@ -481,6 +565,11 @@ $_dark-black: #1E1E1E
 
     &:hover
       color: #eb4b20
+//advance
+.advance
+  background: url(../img/bg-mount.jpg) repeat top center scroll
+  height: 837px
+  margin-top: 90px
 
 
 

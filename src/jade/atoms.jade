@@ -78,6 +78,9 @@ block content
         span.btn.btn_gray discover
 
     .atom
+        span.btn.btn_compare
+            i.fa.fa-exchange
+    .atom
         span.btn.btn_cross
             i.fa.fa-remove
 
@@ -140,9 +143,25 @@ block content
     .atom
         .item
             .item__top
-            .item__center
+                a(href="#")
+                    img(src="img/item_1.jpg").item__img
+                .item__btn-group
+                    .btn-group
+                        ul.btn-group__list
+                            li.btn-group__el
+                                span.btn.btn_white
+                                    i.fa.fa-exchange
+                            li.btn-group__el
+                                span.btn.btn_white
+                                    i.fa.fa-heart
+                            li.btn-group__el
+                                span.btn.btn_white.btn_cart
+                                    i.fa.fa-shopping-cart
             .item__bottom
-
+                h4.item__title apple cinema 30"
+                p
+                    span.item__price.item__price_new $110.00
+                    span.item__price.item__price_old $122.00
     .atom
         .promotion
             .promotion__top
@@ -162,6 +181,19 @@ block content
                             a(href="#").actions__link detail
                         li.actions__el
                             a(href="#").actions__link add to cart
+
+    .atom(style="background: #ccc")
+        .btn-group
+            ul.btn-group__list
+                li.btn-group__el
+                    span.btn.btn_white
+                        i.fa.fa-exchange
+                li.btn-group__el
+                    span.btn.btn_white
+                        i.fa.fa-heart
+                li.btn-group__el
+                    span.btn.btn_white.btn_cart
+                        i.fa.fa-shopping-cart
 
 
 

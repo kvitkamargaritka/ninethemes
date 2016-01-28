@@ -49,43 +49,163 @@ block content
 				span.btn.btn_nav
 					i.fa.fa-reorder
 					|navigation
-
+		//BEGIN promo
+		.promo
+			.promo__big
+				img(src="/img/promo_goshop_2.png")
+			.promo__small
+				img(src="/img/promo_goshop_3.png")
+			//.promo__btn
+			//	a(href="#")
+			//		span.btn.btn_find find your bike
+		//END promo
+		//BEGIN item-banner
+		.item-banner
+			.item-banner__list
+				.item-banner__el
+					img(src="/img/banner_1.png").item-banner__img
+					.item-banner__descr.item-banner__descr_left
+						h2.item-banner__title men
+							span.item-banner__price $350
+						p.item-banner__text Bikes, Clothing, and many more...
+						span.btn.btn_shop shop now
+				.item-banner__el
+					img(src="/img/banner_02.png").item-banner__img
+					.item-banner__descr.item-banner__descr_center
+						h2.item-banner__title women
+							span.item-banner__price.item-banner__price_orange $250
+						p.item-banner__text Bikes, Clothing, Accessories and many more...
+						span.btn.btn_shop shop now
+				.item-banner__el
+					img(src="/img/banner_03.png").item-banner__img
+					.item-banner__descr.item-banner__descr_right
+						h2.item-banner__title.item-banner__title_color bike’s
+							span.item-banner__price $550
+						p.item-banner__text.item-banner__text_color All Famous Bike Brands. Only for you...
+						span.btn.btn_shop shop now
+		//END item-banner
 	//END header
 
-	//BEGIN promo
-	.promo
-		.promo__big
-			img(src="/img/promo_goshop_2.png")
-		.promo__small
-			img(src="/img/promo_goshop_3.png")
-		.promo__btn
-			a(href="#")
-				span.btn.btn_find find your bike
-	//END promo
+	//BEGIN main
+	main.main
+		section.choose-bike
+			.section-title
+				h2.section-title__text choose your
+					span.section-title__text_orange bike
+				p.section-title__descr Search by type of
+				i.section-title__ico.fa.fa-angle-double-down
 
-	//BEGIN item-banner
-	.item-banner
-		.item-banner__list
-			.item-banner__el
-				img(src="/img/banner_1.png").item-banner__img
-				.item-banner__descr.item-banner__descr_left
-					h2.item-banner__title men
-						span.item-banner__price $350
-					p.item-banner__text Bikes, Clothing, and many more...
-					span.btn.btn_shop shop now
-			.item-banner__el
-				img(src="/img/banner_02.png").item-banner__img
-				.item-banner__descr.item-banner__descr_center
-					h2.item-banner__title women
-						span.item-banner__price.item-banner__price_orange $250
-					p.item-banner__text Bikes, Clothing, Accessories and many more...
-					span.btn.btn_shop shop now
-			.item-banner__el
-				img(src="/img/banner_03.png").item-banner__img
-				.item-banner__descr.item-banner__descr_right
-					h2.item-banner__title.item-banner__title_color bike’s
-						span.item-banner__price $550
-					p.item-banner__text.item-banner__text_color All Famous Bike Brands. Only for you...
-					span.btn.btn_shop shop now
+	main.main
+		section.new-arrivals
+			.section-title
+				h2.section-title__text.section-title__text_orange new
+					span.section-title__text arrivals
+				p.section-title__descr Trending Products
 
-	//END item-banner
+		.filter-menu
+			ul.filter-menu__list
+				li.filter-menu__el
+					span.filter-menu__text.filter-menu__text_active clothing
+				li.filter-menu__el
+					span.filter-menu__text bikes
+				li.filter-menu__el
+					span.filter-menu__text components
+				li.filter-menu__el
+					span.filter-menu__text accessories
+				li.filter-menu__el
+					span.filter-menu__text protections
+
+	main
+		.items
+			.items__list
+				.items__el
+					.item
+						.item__top
+							a(href="#")
+								img(src="img/item_1.jpg").item__img
+							.item__btn-group
+								.btn-group
+									ul.btn-group__list
+										li.btn-group__el
+											span.btn.btn_white
+												i.fa.fa-exchange
+										li.btn-group__el
+											span.btn.btn_white
+												i.fa.fa-heart
+										li.btn-group__el
+											span.btn.btn_white.btn_cart
+												i.fa.fa-shopping-cart
+						.item__bottom
+							a(href="#").item__link
+								h4.item__title apple cinema 30"
+							p
+								span.item__price.item__price_new $110.00
+								span.item__price.item__price_old $122.00
+				.items__el
+					.item
+						.item__top
+							a(href="#")
+								img(src="img/item_2.jpg").item__img
+							.item__btn-group
+								.btn-group
+									ul.btn-group__list
+										li.btn-group__el
+											span.btn.btn_white
+												i.fa.fa-exchange
+										li.btn-group__el
+											span.btn.btn_white
+												i.fa.fa-heart
+										li.btn-group__el
+											span.btn.btn_white.btn_cart
+												i.fa.fa-shopping-cart
+						.item__bottom
+							a(href="#").item__link
+								h4.item__title HP LP3065
+							p
+								span.item__price.item__price_new $122.00
+				.items__el
+					.item
+						.item__top
+							a(href="#")
+								img(src="img/item_3.jpg").item__img
+							.item__btn-group
+								.btn-group
+									ul.btn-group__list
+										li.btn-group__el
+											span.btn.btn_white
+												i.fa.fa-exchange
+										li.btn-group__el
+											span.btn.btn_white
+												i.fa.fa-heart
+										li.btn-group__el
+											span.btn.btn_white.btn_cart
+												i.fa.fa-shopping-cart
+						.item__bottom
+							h4.item__title Palm Treo Pro
+							p
+								span.item__price.item__price_new $338.99
+				.items__el
+					.item
+						.item__top
+							a(href="#")
+								img(src="img/item_4.jpg").item__img
+							.item__btn-group
+								.btn-group
+									ul.btn-group__list
+										li.btn-group__el
+											span.btn.btn_white
+												i.fa.fa-exchange
+										li.btn-group__el
+											span.btn.btn_white
+												i.fa.fa-heart
+										li.btn-group__el
+											span.btn.btn_white.btn_cart
+												i.fa.fa-shopping-cart
+						.item__bottom
+							a(href="#").item__link
+								h4.item__title Canon EOS 5D
+							p
+								span.item__price.item__price_new $98.00
+								span.item__price.item__price_old $122.00
+
+
