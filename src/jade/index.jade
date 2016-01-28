@@ -52,40 +52,40 @@ block content
 
 	//END header
 
+	//BEGIN promo
 	.promo
-		img(src="/img/promo_goshop_1.png")
-		.promo__in
+		.promo__big
 			img(src="/img/promo_goshop_2.png")
+		.promo__small
 			img(src="/img/promo_goshop_3.png")
+		.promo__btn
 			a(href="#")
 				span.btn.btn_find find your bike
+	//END promo
 
-	.banner
-		ul.banner__list
-			li.banner__el
-				.item-banner
-					img(src="/img/banner_1.png").item-banner__img
-					.item-banner__descr
-						h2.item-banner__title men
-							span.item-banner__price $350
-							p.item-banner__text Bikes, Clothing, and many more...
-							.item-banner__buy
-								span.btn shop now
-			li.banner__el
-				.item-banner
-					img(src="/img/banner_02.png").item-banner__img
-					.item-banner__descr
-						h2.item-banner__title women
-							span.item-banner__price $250
-							p.item-banner__text Bikes, Clothing, Accessories and many more...
-							.item-banner__buy
-								span.btn shop now
-			li.banner__el
-				.item-banner
-					img(src="/img/banner_03.png").item-banner__img
-					.item-banner__descr
-						h2.item-banner__title bike’s
-							span.item-banner__price $550
-							p.item-banner__text All Famous Bike Brands
-							.item-banner__buy
-								span.btn shop now
+	//BEGIN item-banner
+	.item-banner
+		.item-banner__list
+			.item-banner__el
+				img(src="/img/banner_1.png").item-banner__img
+				.item-banner__descr.item-banner__descr_left
+					h2.item-banner__title men
+						span.item-banner__price $350
+					p.item-banner__text Bikes, Clothing, and many more...
+					span.btn.btn_shop shop now
+			.item-banner__el
+				img(src="/img/banner_02.png").item-banner__img
+				.item-banner__descr.item-banner__descr_center
+					h2.item-banner__title women
+						span.item-banner__price.item-banner__price_orange $250
+					p.item-banner__text Bikes, Clothing, Accessories and many more...
+					span.btn.btn_shop shop now
+			.item-banner__el
+				img(src="/img/banner_03.png").item-banner__img
+				.item-banner__descr.item-banner__descr_right
+					h2.item-banner__title.item-banner__title_color bike’s
+						span.item-banner__price $550
+					p.item-banner__text.item-banner__text_color All Famous Bike Brands. Only for you...
+					span.btn.btn_shop shop now
+
+	//END item-banner

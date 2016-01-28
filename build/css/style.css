@@ -122,7 +122,7 @@ body { font-size: 14px; font-family: "lato"; }
 .section-title { background: url(../img/bg-heading.png) no-repeat top; text-align: center; padding: 40px 0 0 0; }
 .section-title__text { font-size: 34px; font-weight: 800; color: #202020; text-transform: uppercase; }
 .section-title__text_orange { color: #ee4415; }
-.section-title__descr { color: #929292; font-family: lato; }
+.section-title__descr { color: #929292; font-family: Playball; font-size: 22px; padding-top: 9px; }
 .section-title__ico { color: #ef4416; font-size: 22px; }
 
 .filter-menu__el { display: inline-block; padding: 0 3px; }
@@ -131,34 +131,67 @@ body { font-size: 14px; font-family: "lato"; }
 .filter-menu__text { text-transform: uppercase; color: #929292; font-size: 15px; font-weight: 600; cursor: pointer; }
 .filter-menu__text_active { color: #1f1f1f; }
 
-.item-banner { position: relative; background: url(../img/banner_1.png) no-repeat; }
-.item-banner__descr { width: 190px; margin-bottom: 10px; position: absolute; top: 150px; left: 222px; z-index: 2; }
+.item-banner__img { width: 100%; display: block; }
+.item-banner__list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; }
+.item-banner__el { width: 33.333%; position: relative; }
+.item-banner__descr { width: 220px; position: absolute; top: 105px; right: 32px; z-index: 2; }
+.item-banner__descr_left { right: 40px; }
+.item-banner__descr_center { right: 80px; }
+.item-banner__descr_right { left: 45px; }
 .item-banner__title { font-size: 39px; font-weight: 800; color: #fff; text-transform: uppercase; }
-.item-banner__price { font-size: 31px; font-weight: 300; color: #eef1c9; }
-.item-banner__text { font-size: 17px; color: #fff; }
-.item-banner__buy { position: absolute; top: 170px; left: 0; }
+.item-banner__title_color { color: #525a46; }
+.item-banner__price { font-size: 31px; font-weight: 300; font-family: Roboto Slab; color: #eef1c9; margin-left: 7px; }
+.item-banner__price_orange { color: #f1613d; }
+.item-banner__text { font-size: 17px; font-family: "lato"; color: #fff; margin-bottom: 50px; }
+.item-banner__text_color { color: #525a46; }
 
-.banner__list { width: 100%; }
-.banner__el { display: inline-block; width: 33%; }
-
-.promo { position: relative; }
-.promo__in { position: absolute; top: 0; right: 0; }
+.promo { background-image: url(../img/promo_goshop_1.png); height: 790px; width: 100%; position: relative; }
+.promo__big { position: absolute; top: 197px; right: 205px; }
+.promo__small { position: absolute; top: 412px; right: 221px; }
 
 .product__name { color: #1E1E1E; font-size: 24px; font-weight: bold; text-transform: uppercase; }
 .product__name:hover { color: #eb4b20; }
 .product__text { font-size: 15px; color: #979797; }
 .product__text_orange { color: #ed4d21; }
+
+.promotion { background: url(../img/promotion_1.jpg) no-repeat; height: 550px; position: relative; }
+.promotion__price { color: #444; font-size: 42px; font-weight: 800; text-transform: uppercase; }
+.promotion__price_orange { color: #eb4b20; font-size: 38px; }
+
+.features { margin: 27px 0 0 0; }
+.features__el { font-size: 15px; }
+.features__el:before { content: "•"; padding-right: 3px; }
+
+.actions__el { display: inline-block; }
+.actions__link { text-transform: uppercase; font-size: 14px; font-weight: bold; color: #1E1E1E; text-decoration: none; }
+.actions__link:hover { color: #eb4b20; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+@media only screen and (max-width: 1270px){
+ .item-banner__descr{ top: 50px; } }
 @media only screen and (max-width: 1024px){
  .general-menu{ display: none; }
  .btn_nav{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
- .header{ padding: 35px 15px; } }
+ .header{ padding: 35px 15px; }
+ .item-banner__descr_left{ right: 20px; }
+ .item-banner__descr_center{ right: 40px; }
+ .item-banner__title{ font-size: 30px; }
+ .item-banner__price{ font-size: 22px; }
+ .promo{ width: 100%; } }
+@media only screen and (max-width: 920px){
+ .item-banner__descr{ top: 30px; }
+ .item-banner__descr_center{ right: 20px; }
+ .item-banner__descr_right{ left: 20px; }
+ .item-banner__text{ margin-bottom: 20px; } }
 @media only screen and (max-width: 768px){
  .logo{ margin-bottom: 15px; }
  .header__left{ width: 100%; }
  .header__right{ width: 100%; }
- .header__in{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; text-align: center; } }
+ .header__in{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; text-align: center; }
+ .item-banner__list{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+ .item-banner__el{ width: 100%; }
+ .item-banner__descr{ top: 70px; right: 40px; }
+ .item-banner__text{ margin-bottom: 50px; } }
 @media only screen and (max-width: 610px){
  .user-menu{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
  .user-menu__el{ border: none; } }

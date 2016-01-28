@@ -176,6 +176,8 @@ $_dark-black: #1E1E1E
       display: inline-block
       margin-right: 5px
 
+  &_shop
+
 //newsletter
 .newsletter
   position: relative
@@ -276,7 +278,9 @@ $_dark-black: #1E1E1E
 
   &__descr
     color: #929292
-    font-family: lato
+    font-family: Playball
+    font-size: 22px
+    padding-top: 9px
 
   &__ico
     color: $_orange-btn
@@ -312,58 +316,110 @@ $_dark-black: #1E1E1E
     &_active
       color: #1f1f1f
 
-//banner
+//item-banner
 .item-banner
-  position: relative
-  background: url(../img/banner_1.png) no-repeat
+
+  &__img
+    width: 100%
+    display: block
+
+  &__list
+    display: flex
+    flex-direction: row
+    +r(768)
+      flex-wrap: wrap
+
+  &__el
+    width: 33.333%
+    position: relative
+    +r(768)
+      width: 100%
 
   &__descr
-    width: 190px
-    margin-bottom: 10px
+    width: 220px
     position: absolute
-    top: 150px
-    left: 222px
+    top: 105px
+    right: 32px
     z-index: 2
+    +r(1270)
+      top: 50px
+    +r(920)
+      top: 30px
+    +r(768)
+      top: 70px
+      right: 40px
+
+    &_left
+      right: 40px
+      +r(1024)
+        right: 20px
+
+    &_center
+      right: 80px
+      +r(1024)
+        right: 40px
+      +r(920)
+        right: 20px
+
+    &_right
+      left: 45px
+      +r(920)
+        left: 20px
 
   &__title
     font-size: 39px
     font-weight: 800
     color: $_white
     text-transform: uppercase
+    +r(1024)
+      font-size: 30px
+
+    &_color
+      color: #525a46
 
   &__price
     font-size: 31px
     font-weight: 300
+    font-family: Roboto Slab
     color: #eef1c9
+    margin-left: 7px
+    +r(1024)
+      font-size: 22px
+
+    &_orange
+      color: #f1613d
 
   &__text
     font-size: 17px
+    font-family: 'lato'
     color: $_white
+    margin-bottom: 50px
+    +r(920)
+      margin-bottom: 20px
+    +r(768)
+      margin-bottom: 50px
 
-  &__buy
-    position: absolute
-    top: 170px
-    left: 0
-
-//banner
-.banner
-
-  &__list
-    width: 100%
-
-  &__el
-    display: inline-block
-    width: 33%
-
+    &_color
+      color: #525a46
 
 //promo
 .promo
+  background-image: url(../img/promo_goshop_1.png)
+  height: 790px
+  width: 100%
   position: relative
+  +r(1024)
+    width: 100%
 
-  &__in
+  &__big
     position: absolute
-    top: 0
-    right: 0
+    top: 197px
+    right: 205px
+
+  &__small
+    position: absolute
+    top: 412px
+    right: 221px
 
 //product
 .product
@@ -383,6 +439,50 @@ $_dark-black: #1E1E1E
 
     &_orange
       color: #ed4d21
+
+//promotion
+.promotion
+  background: url(../img/promotion_1.jpg) no-repeat
+  height: 550px
+  position: relative
+
+  &__price
+    color: #444
+    font-size: 42px
+    font-weight: 800
+    text-transform: uppercase
+
+    &_orange
+      color: #eb4b20
+      font-size: 38px
+
+//features
+.features
+  margin: 27px 0 0 0
+  &__el
+    font-size: 15px
+
+    &:before
+      content: "•"
+      padding-right: 3px
+
+//actions
+.actions
+
+  &__el
+    display: inline-block
+
+  &__link
+    text-transform: uppercase
+    font-size: 14px
+    font-weight: bold
+    color: $_dark-black
+    text-decoration: none
+
+    &:hover
+      color: #eb4b20
+
+
 
 
 
