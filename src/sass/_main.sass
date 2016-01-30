@@ -26,6 +26,7 @@ $_grey-btn: #2C2C2C
 $_white: #fff
 $_black: #000
 $_dark-black: #1E1E1E
+$_text: #979797
 
 //top-line
 .top-line
@@ -208,6 +209,9 @@ $_dark-black: #1E1E1E
     display: flex
     flex-direction: row
     justify-content: center
+    +r(1155)
+      flex-wrap: wrap
+
 
   &__el
     margin: 0 13px
@@ -250,6 +254,7 @@ $_dark-black: #1E1E1E
     &_old
       text-decoration: line-through
       color: #929292
+
   &__btn-group
     display: none
     position: absolute
@@ -520,36 +525,6 @@ $_dark-black: #1E1E1E
     &_orange
       color: #ed4d21
 
-//promotion
-.promotion
-  background: url(../img/promotion_1.jpg) no-repeat
-  height: 550px
-  position: relative
-
-  &__title
-    font-family: Playball
-    font-size: 22px
-
-  &__price
-    color: #444
-    font-size: 42px
-    font-weight: 800
-    text-transform: uppercase
-
-    &_orange
-      color: #eb4b20
-      font-size: 38px
-
-//features
-.features
-  margin: 27px 0 0 0
-  &__el
-    font-size: 15px
-
-    &:before
-      content: "•"
-      padding-right: 3px
-
 //actions
 .actions
 
@@ -570,6 +545,184 @@ $_dark-black: #1E1E1E
   background: url(../img/bg-mount.jpg) repeat top center scroll
   height: 837px
   margin-top: 90px
+
+//promotion
+.promotion
+  display: flex
+  flex-direction: row
+  position: relative
+
+  &__list
+    margin: 27px 0 0 0
+
+  &__el
+    font-size: 15px
+
+    &:before
+      content: "•"
+      padding-right: 3px
+
+  &__descr
+    position: absolute
+    top: 70px
+    left: 250px
+
+    &_left
+      left: 300px
+    &_right
+      left: 650px
+
+  &__descount
+    position: absolute
+    top: 0
+    left: 50%
+    font-family: Roboto
+    font-size: 14px
+    font-weight: 500
+    text-transform: uppercase
+    background-color: $_white
+    color: #7c7c7c
+
+
+
+
+  &__title
+    font-family: Playball
+    font-size: 22px
+
+  &__price
+    color: #444
+    font-size: 42px
+    font-weight: 800
+    text-transform: uppercase
+
+    &_orange
+      color: #eb4b20
+      font-size: 38px
+
+//social
+.social
+
+  &__list
+    display: flex
+    flex-direction: row
+
+  &__el
+    background-color: #141414
+    border: 1px solid #2e2e2e
+    border-radius: 100%
+    width: 32px
+    height: 32px
+    text-align: center
+    padding-top: 3px
+    margin: 0 2px
+    transition: all 0.2s ease-in
+
+    &:hover
+      background-color: $_orange-btn
+      color: $_white
+      border: 1px solid #ed5126
+
+  &__ico
+    color: #2e2e2e
+
+//payments
+.payments
+
+  &__list
+    display: flex
+    flex-direction: row
+
+  &__el
+    margin: 0 15px
+    opacity: 0.25
+
+    &:hover
+      opacity: 1
+
+//copyright
+.copyright
+  text-align: center
+
+  &__text
+    color: #373737
+    font-size: 15px
+    font-family: 'lato'
+
+  &__link
+    color: #eb5126
+    text-decoration: none
+    margin: 0 3px
+
+//brands
+.brands
+
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+
+  &__el
+    opacity: 0.3
+    border-left: 1px solid rgba(255, 255, 255, .09)
+
+    &:hover
+      opacity: 1
+
+//review
+.review
+  background: url(../img/bg-review.jpg) no-repeat top center scroll
+  height: 450px
+
+  &__text
+    color: $_white
+    text-align: center
+    max-width: 800px
+    padding: 0 50px
+
+
+  &__title
+    font-size: 34px
+    font-weight: 800
+    text-transform: uppercase
+
+  &__happy
+    font-family: Playball
+    font-size: 22px
+    
+  &__descr
+    color: #dddddd
+    font-size: 19px
+    padding: 40px 0
+
+  &__author
+    font-size: 17px
+    font-weight: bold
+
+//vertical-list
+.vertical-list
+
+  &__title
+    color: $_white
+    font-family: 'lato'
+    font-size: 16px
+    text-transform: uppercase
+    font-weight: bold
+    margin: 70px 0 0 0
+
+  &__link
+    color: $_text
+    text-decoration: none
+    font-family: Roboto
+    font-size: 15px
+
+    &:hover
+      color: $_white
+
+
+
+
+
 
 
 
