@@ -201,48 +201,48 @@ block content
 
     .atom
         .social
-            .social__list
-                .social__el
+            ul.social__list
+                li.social__el
                     a(href="#").social_link
                         i.social__ico.fa.fa-twitter
-                .social__el
+                li.social__el
                     a(href="#").social_link
                         i.social__ico.fa.fa-facebook
-                .social__el
+                li.social__el
                     a(href="#").social_link
                         i.social__ico.fa.fa-youtube-play
-                .social__el
+                li.social__el
                     a(href="#").social_link
                         i.social__ico.fa.fa-github
-                .social__el
+                li.social__el
                     a(href="#").social_link
                         i.social__ico.fa.fa-
 
     .atom(style="background: #000")
         .payments
-            .payments__list
-                .payments__el
+            ul.payments__list
+                li.payments__el
                     a(href="#").payments__link
                         img(src="img/payment-1.png")
-                .payments__el
+                li.payments__el
                     a(href="#").payments__link
                         img(src="img/payment-2.png")
-                .payments__el
+                li.payments__el
                     a(href="#").payments__link
                         img(src="img/payment-3.png")
-                .payments__el
+                li.payments__el
                     a(href="#").payments__link
                         img(src="img/payment-4.png")
-                .payments__el
+                li.payments__el
                     a(href="#").payments__link
                         img(src="img/payment-5.png")
-                .payments__el
+                li.payments__el
                     a(href="#").payments__link
                         img(src="img/payment-6.png")
-                .payments__el
+                li.payments__el
                     a(href="#").payments__link
                         img(src="img/payment-7.png")
-                .payments__el
+                li.payments__el
                     a(href="#").payments__link
                         img(src="img/payment-8.png")
 
@@ -254,22 +254,22 @@ block content
 
 
     .atom(style="background: #000")
-        .brands(style="background: #000")
-            .brands__list
-                .brands__el
-                    a(href="#").brands__link
+        .partners(style="background: #000")
+            ul.partners__list
+                li.partners__el
+                    a(href="#").partners__link
                         img(src="img/brand1.png")
-                .brands__el
-                    a(href="#").brands__link
+                li.partners__el
+                    a(href="#").partners__link
                         img(src="img/brand2.png")
-                .brands__el
-                    a(href="#").brands__link
+                li.partners__el
+                    a(href="#").partners__link
                         img(src="img/brand3.png")
-                .brands__el
-                    a(href="#").brands__link
+                li.partners__el
+                    a(href="#").partners__link
                         img(src="img/brand4.png")
-                .brands__el
-                    a(href="#").brands__link
+                li.partners__el
+                    a(href="#").partners__link
                         img(src="img/brand5.png")
 
     .atom
@@ -283,30 +283,95 @@ block content
     .atom
         .vertical-list
             h4.vertical-list__title My account
-            .vertical-list__item
-                .vertical-list__el
+            ul.vertical-list__item
+                li.vertical-list__el
                     a(href="#").vertical-list__link My account
-                .vertical-list__el
+                li.vertical-list__el
                     a(href="#").vertical-list__link Order History
-                .vertical-list__el
+                li.vertical-list__el
                     a(href="#").vertical-list__link Wish List
-                .vertical-list__el
+                li.vertical-list__el
                     a(href="#").vertical-list__link Newsletter
 
     .atom
         .vertical-list
             h4.vertical-list__title Our service
-            .vertical-list__item
-                .vertical-list__el
+            ul.vertical-list__item
+                li.vertical-list__el
                     a(href="#").vertical-list__link Shipping Return
-                .vertical-list__el
+                li.vertical-list__el
                     a(href="#").vertical-list__link Contact us
-                .vertical-list__el
+                li.vertical-list__el
                     a(href="#").vertical-list__link Faq
-                .vertical-list__el
+                li.vertical-list__el
                     a(href="#").vertical-list__link Affiliates
-                .vertical-list__el
+                li.vertical-list__el
                     a(href="#").vertical-list__link Specials
+
+    .atom
+        .vertical-list
+            h4.vertical-list__title newsletter
+            ul.vertical-list__item
+                li.vertical-list__el
+                    p.footer-newsletter__text Lorem ipsum dolor sit amet conseret adipiscing elit sed diam nonunem.
+                li.vertical-list__el
+                    form.subscribe.subscribe_footer
+                        .subscribe__field
+                            input.input.input__mail(placeholder="Your Email")
+                        .subscribe__action
+                            button.btn.btn_mail(type="submit")
+                                i.fa.fa-envelope
+
+    .atom
+        .logo
+            a.logo__link(href="#")
+                img(src="img/logo-footer.png")
+            .logo__descr
+                p Ecommerce OC Template
+            .social
+                ul.social__list
+                    li.social__el
+                        a(href="#").social_link
+                            i.social__ico.fa.fa-twitter
+                    li.social__el
+                        a(href="#").social_link
+                            i.social__ico.fa.fa-facebook
+                    li.social__el
+                        a(href="#").social_link
+                            i.social__ico.fa.fa-youtube-play
+                    li.social__el
+                        a(href="#").social_link
+                            i.social__ico.fa.fa-github
+                    li.social__el
+                        a(href="#").social_link
+                            i.social__ico.fa.fa-behance
+
+
+    .atom(style="background: #000")
+        .found-bike
+            .found-bike__left
+                h5.found-bike__title Found your
+                    span.found-bike__orange Dream Bike
+                    |? Why wait
+                p.found-bike__descr Get it now with a 0% finance deal from GoShop Fashion..
+            .found-bike__right
+                .found-bike__action
+                    span.btn.btn_gray discover
+                    span.btn Purchase
+
+    .atom
+        .product-sale
+            a(href="#")
+                img(src="img/product-sale1.png")
+            span.product-sale__text Mountain bike
+            a(href="#")
+                h6.product-sale__title GT SENSOR COMP 27.5
+            .product-sale__price
+                span Price:
+                span.item__price.item__price_new $299
+                span.item__price.item__price_old $599
+
+
 
     .atom
         .footer-newsletter
@@ -318,6 +383,17 @@ block content
                 .footer-newsletter__action
                     span.btn.btn_white(type="submit")
                         i.fa.fa-envelope
+
+    .atom
+        .contacts
+            img(src="img/logo-footer.png")
+            p 148 Parramatta Road Stanmore NSW 2048, New York City
+            p Call Sales & Workshop : (02) 9567 1999
+            img(src="img/bg-heading-2.png")
+            h5 Opening hours
+            p Monday to Wednesday from 10.00AM - 17.00PM
+            p Thursday to Sunday from 11.00AM - 19.00PM
+
 
 
 

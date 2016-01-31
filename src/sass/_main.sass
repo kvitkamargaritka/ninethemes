@@ -2,6 +2,7 @@
 body
   font-size: 14px
   font-family: 'lato'
+
 //container
 .container
   max-width: 958px
@@ -155,6 +156,7 @@ $_text: #979797
     background-color: $_grey-btn
     color: #999
     border: 1px solid #666
+    margin: 0 30px
 
     &:hover
       background-color: #666
@@ -194,6 +196,13 @@ $_text: #979797
   &_cart
     color: $_white
     background: $_orange-btn
+
+  &_mail
+    width: 35px
+    height: 35px
+    background-color: #ee4415
+    padding: 0
+    border-radius: 0
 
 //btn-group
 .btn-group
@@ -317,6 +326,8 @@ $_text: #979797
   &__action
     margin: 20px 0
     position: relative
+
+
 
 //header
 .header
@@ -602,6 +613,7 @@ $_text: #979797
 
 //social
 .social
+  margin-top: 20px
 
   &__list
     display: flex
@@ -628,6 +640,9 @@ $_text: #979797
 
 //payments
 .payments
+  border-top: 1px solid #242424
+  margin-top: 80px
+  padding: 30px 0
 
   &__list
     display: flex
@@ -643,6 +658,8 @@ $_text: #979797
 //copyright
 .copyright
   text-align: center
+  background-color: #111111
+  padding: 30px 0
 
   &__text
     color: #373737
@@ -654,8 +671,8 @@ $_text: #979797
     text-decoration: none
     margin: 0 3px
 
-//brands
-.brands
+//partners
+.partners
 
   &__list
     display: flex
@@ -664,7 +681,7 @@ $_text: #979797
 
   &__el
     opacity: 0.3
-    border-left: 1px solid rgba(255, 255, 255, .09)
+    border-right: 1px solid rgba(255, 255, 255, .09)
 
     &:hover
       opacity: 1
@@ -718,6 +735,147 @@ $_text: #979797
 
     &:hover
       color: $_white
+
+  &__text
+    color: #979797
+    font-family: Roboto
+    font-size: 15px
+
+//.found-bike
+.found-bike
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+
+  &__title
+    font-family: 'lato'
+    font-size: 28px
+    color: $_white
+
+  &__orange
+    font-weight: 800
+    color: #ed4d21
+
+  &__descr
+    font-size: 17px
+    color: #666666
+
+//logo
+.logo
+
+  &__descr
+    color: $_text
+    font-size: 15px
+    margin-top: 20px
+
+//footer
+.footer
+  background-color: #141414
+  color: #929292
+
+  &__row
+    display: flex
+    flex-direction: row
+
+  &__col
+    width: 25%
+
+//address
+.address
+  background: url(../img/bg-contacts.jpg) no-repeat top right scroll
+
+//contacts
+.contacts
+  text-align: center
+  max-width: 800px
+  background: rgba(20, 20, 20, .97)
+  color: #999
+  font-size: 17px
+  line-height: 1.9
+  margin: 81px auto 69px auto
+  padding: 80px 30px
+
+  & img
+    margin: 30px 0 10px
+
+  & h5
+    color: $_white
+    font-size: 21px
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 15px
+
+//news
+.news
+  background-color: #F7F7F7
+  font-family: 'lato'
+
+  &__left
+    width: 20%
+    margin: 0 10px
+
+  &__right
+    width: 80%
+
+  &__list
+    display: flex
+    flex-direction: row
+    padding: 50px 0 168px
+
+  &__el
+    display: flex
+
+  &__date
+    width: 60px
+    height: 60px
+    background-color: #ed5126
+    color: $_white
+    text-align: center
+    font-family: "Roboto Slab"
+    font-size: 19px
+    font-weight: bold
+    padding: 12px 0 0 0
+
+    & p
+      text-transform: uppercase
+      font-size: 13px
+      font-weight: normal
+
+  &__comments
+    width: 60px
+    height: 60px
+    background-color: #222
+    color: $_white
+    text-align: center
+    font-family: "Roboto Slab"
+    font-size: 15px
+    padding: 12px 0 0 0
+
+
+  &__tags
+    padding: 2px 0 11px 0
+
+  &__link
+    text-decoration: none
+    color: #a0a0a0
+
+    &:hover
+      color: $_black
+
+  &__descr
+    color: #393939
+    font-size: 19px
+    line-height: 1.4
+
+    &:hover
+      color: #ed5126
+
+
+
+
+
+
+
 
 
 
