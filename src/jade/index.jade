@@ -211,7 +211,7 @@ block content
 								span.item__price.item__price_new $98.00
 								span.item__price.item__price_old $122.00
 
-	main.main
+		//BEGIN promotion
 		section
 			.promotion
 				img(src="/img/promotion_1.jpg")
@@ -233,8 +233,96 @@ block content
 						li.promotion__el Integrated i-Lume LED rear light
 						li.promotion__el Optional hood available separately
 						li.promotion__el Breathability rating 15,000
+		//END promotion
 
-	main.main
+		//BEGIN offers
+		section.offers.container
+			.section-title
+				h2.section-title__text Special offers
+				p.section-title__descr Special price only this month
+			ul.offers__list.container
+				li.offers__el
+					.offers__item
+						.offers__left
+							a(href="#")
+								img(src="img/product-sale1.png")
+						.offers__right
+							p.offers__text Mountain bike
+							p.offers__title
+								a(href="#") GT SENSOR COMP 27.5
+							p.offers__price
+								span Price:
+								span.offers__price.offers__price_new $299
+								span.offers__price.offers__price_old $599
+				li.offers__el
+					.offers__item
+						.offers__left
+							a(href="#")
+								img(src="img/product-sale2.png")
+						.offers__right
+							p.offers__text Mountain bike
+							p.offers__title
+								a(href="#") BREEZER SQUALL 1.0
+							p.offers__price
+								span Price:
+								span.offers__price.offers__price_new $299
+								span.offers__price.offers__price_old $599
+				li.offers__el
+					.offers__item
+						.offers__left
+							a(href="#")
+								img(src="img/product-sale3.png")
+						.offers__right
+							p.offers__text Mountain bike
+							p.offers__title
+								a(href="#") GT SENSOR COMP 27.5
+							p.offers__price
+								span Price:
+								span.offers__price.offers__price_new $299
+								span.offers__price.offers__price_old $599
+				li.offers__el
+					.offers__item
+						.offers__left
+							a(href="#")
+								img(src="img/product-sale3.png")
+						.offers__right
+							p.offers__text Mountain bike
+							p.offers__title
+								a(href="#") GT SENSOR COMP 27.5
+							p.offers__price
+								span Price:
+								span.offers__price.offers__price_new $299
+								span.offers__price.offers__price_old $599
+				li.offers__el
+					.offers__item
+						.offers__left
+							a(href="#")
+								img(src="img/product-sale1.png")
+						.offers__right
+							p.offers__text Mountain bike
+							p.offers__title
+								a(href="#") GT SENSOR COMP 27.5
+							p.offers__price
+								span Price:
+								span.offers__price.offers__price_new $299
+								span.offers__price.offers__price_old $599
+				li.offers__el
+					.offers__item
+						.offers__left
+							a(href="#")
+								img(src="img/product-sale2.png")
+						.offers__right
+							p.offers__text Mountain bike
+							p.offers__title
+								a(href="#") BREEZER SQUALL 1.0
+							p.offers__price
+								span Price:
+								span.offers__price.offers__price_new $299
+								span.offers__price.offers__price_old $599
+
+		//END offers
+
+		//BEGIN news
 		section.news
 			.section-title
 				h2.section-title__text Latest news
@@ -250,13 +338,16 @@ block content
 					.news__right
 						.news__top
 							.news__tags
-								a.news__link(href="#") Fastor
-								a.news__link(href="#") Beatiful
+								ul
+									li
+										a.news__link(href="#") Fastor
+									li
+										a.news__link(href="#") Beatiful
 						.news__center
 							.news__descr
 								a(href="#") Donec ut nunc sit amet urna aliquet
 						.news__bottom
-							a(href="#") Read More
+							span.news__more read more
 				li.news__el
 					.news__left
 						.news__date 16
@@ -267,13 +358,16 @@ block content
 					.news__right
 						.news__top
 							.news__tags
-								a.news__link(href="#") Fastor
-								a.news__link(href="#") Buy It
+								ul
+									li
+										a.news__link(href="#") Fastor
+									li
+										a.news__link(href="#") Buy It
 						.news__center
 							.news__descr
 								a(href="#") Nulla dictum consequat lorem ac vehicula
 						.news__bottom
-							a(href="#") Read More
+							span.news__more read more
 				li.news__el
 					.news__left
 						.news__date 12
@@ -290,39 +384,41 @@ block content
 							.news__descr
 								a(href="#") Etiam ac aliquet ex nec volutpat orci
 						.news__bottom
-							a(href="#") Read More
+							span.news__more read more
+		//END news
 
 
 
 
-	main.main
-		section
-			.address
-				.contacts
-					img(src="img/logo-footer.png")
-					p 148 Parramatta Road Stanmore NSW 2048, New York City
-					p Call Sales & Workshop : (02) 9567 1999
-					img(src="img/bg-heading-2.png")
-					h5 Opening hours
-					p Monday to Wednesday from 10.00AM - 17.00PM
-					p Thursday to Sunday from 11.00AM - 19.00PM
-				.partners.container
-					ul.partners__list
-						li.partners__el
-							a(href="#").partners__link
-								img(src="img/brand1.png")
-						li.partners__el
-							a(href="#").partners__link
-								img(src="img/brand2.png")
-						li.partners__el
-							a(href="#").partners__link
-								img(src="img/brand3.png")
-						li.partners__el
-							a(href="#").partners__link
-								img(src="img/brand4.png")
-						li.partners__el
-							a(href="#").partners__link
-								img(src="img/brand5.png")
+		//BEGIN address
+		section.address
+			.contacts
+				img(src="img/logo-footer.png")
+				p 148 Parramatta Road Stanmore NSW 2048, New York City
+				p Call Sales & Workshop : (02) 9567 1999
+				img(src="img/bg-heading-2.png")
+				h5 Opening hours
+				p Monday to Wednesday from 10.00AM - 17.00PM
+				p Thursday to Sunday from 11.00AM - 19.00PM
+			.partners.container
+				ul.partners__list
+					li.partners__el
+						a(href="#").partners__link
+							img(src="img/brand1.png")
+					li.partners__el
+						a(href="#").partners__link
+							img(src="img/brand2.png")
+					li.partners__el
+						a(href="#").partners__link
+							img(src="img/brand3.png")
+					li.partners__el
+						a(href="#").partners__link
+							img(src="img/brand4.png")
+					li.partners__el
+						a(href="#").partners__link
+							img(src="img/brand5.png")
+		//END address
+
 	//END main
 
 	//BEGIN footer

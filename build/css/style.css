@@ -66,7 +66,7 @@ html { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 body { font-family: Lato; font-size: 14px; line-height: 1.4; }
 
-a { text-decoration: none; }
+a { text-decoration: none; color: #000; }
 
 body { font-size: 14px; font-family: "lato"; }
 
@@ -173,10 +173,21 @@ body { font-size: 14px; font-family: "lato"; }
 .promo__big { position: absolute; top: 197px; right: 205px; }
 .promo__small { position: absolute; top: 412px; right: 221px; }
 
-.product__name { color: #1E1E1E; font-size: 24px; font-weight: bold; text-transform: uppercase; }
-.product__name:hover { color: #eb4b20; }
-.product__text { font-size: 15px; color: #979797; }
-.product__text_orange { color: #ed4d21; }
+.offers__list { margin: 40px 0; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: start; -webkit-justify-content: flex-start; -ms-flex-pack: start; justify-content: flex-start; }
+.offers__el { width: 33%; }
+.offers__item { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; margin-bottom: 25px; }
+.offers__item a { display: block; }
+.offers__item img { width: 100%; display: block; border-right: 1px solid #ccc; }
+.offers__left { width: 35%; }
+.offers__right { margin-left: 15px; width: 65%; }
+.offers__text { font-family: Playball; font-size: 18px; color: #979797; padding-top: 15px; }
+.offers__title { font-family: Roboto; font-size: 15px; font-weight: normal; text-transform: uppercase; color: #262626; }
+.offers__title:hover { color: #ed5126; }
+.offers__title_orange { color: #ed4d21; }
+.offers__price { font-family: Roboto; font-size: 15px; color: #979797; padding-top: 3px; }
+.offers__price span { margin-right: 4px; }
+.offers__price_new { color: #ed5126; }
+.offers__price_old { text-decoration: line-through; margin-left: 5px; }
 
 .actions__el { display: inline-block; }
 .actions__link { text-transform: uppercase; font-size: 14px; font-weight: bold; color: #1E1E1E; text-decoration: none; }
@@ -247,16 +258,22 @@ body { font-size: 14px; font-family: "lato"; }
 .news { background-color: #F7F7F7; font-family: "lato"; }
 .news__left { width: 20%; margin: 0 10px; }
 .news__right { width: 80%; }
+.news__center { padding-bottom: 12px; }
 .news__list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; padding: 50px 0 168px; }
 .news__el { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
 .news__date { width: 60px; height: 60px; background-color: #ed5126; color: #fff; text-align: center; font-family: "Roboto Slab"; font-size: 19px; font-weight: bold; padding: 12px 0 0 0; }
 .news__date p { text-transform: uppercase; font-size: 13px; font-weight: normal; }
 .news__comments { width: 60px; height: 60px; background-color: #222; color: #fff; text-align: center; font-family: "Roboto Slab"; font-size: 15px; padding: 12px 0 0 0; }
 .news__tags { padding: 2px 0 11px 0; }
-.news__link { text-decoration: none; color: #a0a0a0; }
+.news__tags ul { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; }
+.news__tags ul li { margin-right: 10px; }
+.news__link { color: #A0A07E; }
 .news__link:hover { color: #000; }
-.news__descr { color: #393939; font-size: 19px; line-height: 1.4; }
-.news__descr:hover { color: #ed5126; }
+.news__descr a { color: #393939; font-size: 19px; line-height: 1.4; }
+.news__descr a:hover { color: #ed5126; }
+.news__more { color: #ed5126; font-size: 12px; font-weight: bold; text-transform: uppercase; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in; cursor: pointer; }
+.news__more:after { content: "→"; }
+.news__more:hover { color: #222; padding-left: 5px; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1270px){
