@@ -31,7 +31,7 @@
             </div>
             <div class="user-menu__right">
               <ul class="user-menu__list">
-                <li class="user-menu__el"><a class="user-menu__link">my account</a></li>
+                <li class="user-menu__el">my account</li>
                 <li class="user-menu__el">my cart<span class="user-menu__count">0</span></li>
                 <li class="user-menu__el border-right">checkout</li>
               </ul>
@@ -103,26 +103,42 @@
             <p class="section-title__descr">Search by type of</p><i class="section-title__ico fa fa-angle-double-down"></i>
           </div>
         </section>
-      </main>
-      <main class="main">
-        <section class="new-arrivals">
+        <!--BEGIN promotion-->
+        <section class="promotion"><img src="/img/promotion_1.jpg">
+          <div class="promotion__descr promotion__descr_left">
+            <h5 class="promotion__title">Waterproof Jacket</h5><span class="promotion__price">men<span class="promotion__price promotion__price_orange">$350</span></span>
+            <ul class="promotion__list">
+              <li class="promotion__el">Integrated i-Lume LED rear light</li>
+              <li class="promotion__el">Optional hood available separately</li>
+              <li class="promotion__el">Breathability rating 15,000</li>
+            </ul>
+          </div>
+          <!--.promotion__discount Discount up to 75%--><img src="/img/promotion_2.jpg">
+          <div class="promotion__descr promotion__descr_right">
+            <h5 class="promotion__title">Waterproof Jacket</h5><span class="promotion__price">women<span class="promotion__price promotion__price_orange">$250</span></span>
+            <ul class="promotion__list">
+              <li class="promotion__el">Integrated i-Lume LED rear light</li>
+              <li class="promotion__el">Optional hood available separately</li>
+              <li class="promotion__el">Breathability rating 15,000</li>
+            </ul>
+          </div>
+        </section>
+        <!--END promotion-->
+        <!--BEGIN items-->
+        <section class="items">
           <div class="section-title">
             <h2 class="section-title__text section-title__text_orange">new<span class="section-title__text">arrivals</span></h2>
             <p class="section-title__descr">Trending Products</p>
           </div>
-        </section>
-        <div class="filter-menu">
-          <ul class="filter-menu__list">
-            <li class="filter-menu__el"><span class="filter-menu__text filter-menu__text_active">clothing</span></li>
-            <li class="filter-menu__el"><span class="filter-menu__text">bikes</span></li>
-            <li class="filter-menu__el"><span class="filter-menu__text">components</span></li>
-            <li class="filter-menu__el"><span class="filter-menu__text">accessories</span></li>
-            <li class="filter-menu__el"><span class="filter-menu__text">protections</span></li>
-          </ul>
-        </div>
-      </main>
-      <main>
-        <div class="items">
+          <div class="filter-menu">
+            <ul class="filter-menu__list">
+              <li class="filter-menu__el"><span class="filter-menu__text filter-menu__text_active">clothing</span></li>
+              <li class="filter-menu__el"><span class="filter-menu__text">bikes</span></li>
+              <li class="filter-menu__el"><span class="filter-menu__text">components</span></li>
+              <li class="filter-menu__el"><span class="filter-menu__text">accessories</span></li>
+              <li class="filter-menu__el"><span class="filter-menu__text">protections</span></li>
+            </ul>
+          </div>
           <ul class="items__list">
             <li class="items__el">
               <div class="item">
@@ -201,30 +217,27 @@
               </div>
             </li>
           </ul>
-        </div>
-        <!--BEGIN promotion-->
-        <section>
-          <div class="promotion"><img src="/img/promotion_1.jpg">
-            <div class="promotion__descr promotion__descr_left">
-              <h5 class="promotion__title">Waterproof Jacket</h5><span class="promotion__price">men<span class="promotion__price promotion__price_orange">$350</span></span>
-              <ul class="promotion__list">
-                <li class="promotion__el">Integrated i-Lume LED rear light</li>
-                <li class="promotion__el">Optional hood available separately</li>
-                <li class="promotion__el">Breathability rating 15,000</li>
-              </ul>
+        </section>
+        <!--END items-->
+        <section class="featured-product">
+          <div class="section-title">
+            <h2 class="section-title__text">Featured products</h2>
+            <p class="section-title__descr">Our featured products here</p>
+          </div>
+        </section>
+        <!--BEGIN found-bike-->
+        <section class="found-bike">
+          <div class="found-bike__in container">
+            <div class="found-bike__left">
+              <h5 class="found-bike__title">Found your<span class="found-bike__orange">Dream Bike</span>? Why wait</h5>
+              <p class="found-bike__descr">Get it now with a 0% finance deal from GoShop Fashion..</p>
             </div>
-            <!--.promotion__discount Discount up to 75%--><img src="/img/promotion_2.jpg">
-            <div class="promotion__descr promotion__descr_right">
-              <h5 class="promotion__title">Waterproof Jacket</h5><span class="promotion__price">women<span class="promotion__price promotion__price_orange">$250</span></span>
-              <ul class="promotion__list">
-                <li class="promotion__el">Integrated i-Lume LED rear light</li>
-                <li class="promotion__el">Optional hood available separately</li>
-                <li class="promotion__el">Breathability rating 15,000</li>
-              </ul>
+            <div class="found-bike__right">
+              <div class="found-bike__action"><span class="btn btn_gray">discover</span><span class="btn">Purchase</span></div>
             </div>
           </div>
         </section>
-        <!--END promotion-->
+        <!--END found-bike-->
         <!--BEGIN offers-->
         <section class="offers container">
           <div class="section-title">
@@ -373,8 +386,6 @@
         </section>
         <!--END news-->
         
-        
-        
         <!--BEGIN address-->
         <section class="address">
           <div class="contacts"><img src="img/logo-footer.png">
@@ -402,18 +413,18 @@
         <div class="footer footer__in container">
           <div class="footer__row">
             <div class="footer__col">
-              <div class="logo"><a href="#" class="logo__link"><img src="img/logo-footer.png"></a>
+              <div class="logo logo_footer"><a href="#" class="logo__link"><img src="img/logo-footer.png"></a>
                 <div class="logo__descr">
                   <p>Ecommerce OC Template</p>
                 </div>
               </div>
               <div class="social">
                 <ul class="social__list">
-                  <li class="social__el"><a href="#" class="social_link"><i class="social__ico fa fa-twitter"></i></a></li>
-                  <li class="social__el"><a href="#" class="social_link"><i class="social__ico fa fa-facebook"></i></a></li>
-                  <li class="social__el"><a href="#" class="social_link"><i class="social__ico fa fa-youtube-play"></i></a></li>
-                  <li class="social__el"><a href="#" class="social_link"><i class="social__ico fa fa-github"></i></a></li>
-                  <li class="social__el"><a href="#" class="social_link"><i class="social__ico fa fa-behance"></i></a></li>
+                  <li class="social__el"><a href="#" class="social__link"><i class="social__ico fa fa-twitter"></i></a></li>
+                  <li class="social__el"><a href="#" class="social__link"><i class="social__ico fa fa-facebook"></i></a></li>
+                  <li class="social__el"><a href="#" class="social__link"><i class="social__ico fa fa-youtube-play"></i></a></li>
+                  <li class="social__el"><a href="#" class="social__link"><i class="social__ico fa fa-github"></i></a></li>
+                  <li class="social__el"><a href="#" class="social__link"><i class="social__ico fa fa-behance"></i></a></li>
                 </ul>
               </div>
             </div>
@@ -445,7 +456,7 @@
                 <h4 class="vertical-list__title">newsletter</h4>
                 <ul class="vertical-list__item">
                   <li class="vertical-list__el">
-                    <p class="fvertical-list__text">Lorem ipsum dolor sit amet conseret adipiscing elit sed diam nonunem.</p>
+                    <p class="vertical-list__text">Lorem ipsum dolor sit amet conseret adipiscing elit sed diam nonunem.</p>
                   </li>
                   <li class="vertical-list__el">
                     <form class="subscribe subscribe_footer">
@@ -475,19 +486,12 @@
               </ul>
             </div>
           </div>
-          <div class="footer__row">
-            <div class="copyright"><span class="copyright__text">Powered By<a href="#" class="copyright__link">OpenCart</a></span><span class="copyright__text">Your Store 2016</span></div>
-          </div>
         </div>
       </footer>
       <!--END footer-->
-      
-      
-      
-      
-      
-      
-      
+      <section class="copyright">
+        <div class="copyright__in container"><span class="copyright__text">Powered By<a href="#" class="copyright__link">OpenCart</a></span><span class="copyright__text">Your Store 2016</span></div>
+      </section>
     </div>
     <!--END out-->
   </body>

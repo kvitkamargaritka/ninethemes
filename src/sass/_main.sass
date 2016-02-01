@@ -1,7 +1,3 @@
-//body
-body
-  font-size: 14px
-  font-family: 'lato'
 
 //container
 .container
@@ -17,17 +13,6 @@ body
 //border-right
 .border-right
   border-right: 1px solid #333
-
-
-// variables
-$_orange: #ee4415
-$_orange-btn: #ef4416
-$_grey: #777
-$_grey-btn: #2C2C2C
-$_white: #fff
-$_black: #000
-$_dark-black: #1E1E1E
-$_text: #979797
 
 //top-line
 .top-line
@@ -198,8 +183,8 @@ $_text: #979797
     background: $_orange-btn
 
   &_mail
-    width: 35px
-    height: 35px
+    width: 34px
+    height: 34px
     background-color: #ee4415
     padding: 0
     border-radius: 0
@@ -213,6 +198,7 @@ $_text: #979797
 
 //items
 .items
+  margin: 80px 0
 
   &__list
     display: flex
@@ -303,6 +289,17 @@ $_text: #979797
 //input
 .input
 
+  &_footer
+    width: 215px
+    height: 35px
+    background-color: #0f0f0f
+    color: #999
+    font-family: 'lato'
+    font-size: 13px
+    font-weight: 500
+    padding: 0 10px
+    border-radius: 2px
+
   &:focus
     outline: none
 
@@ -327,7 +324,13 @@ $_text: #979797
     margin: 20px 0
     position: relative
 
+  &_footer
+    position: relative
 
+    .subscribe__action
+      position: absolute
+      top: -19px
+      right: 0
 
 //header
 .header
@@ -561,11 +564,12 @@ $_text: #979797
     font-size: 15px
     font-weight: normal
     text-transform: uppercase
-    color: #262626
-    
-    &:hover
-      color: #ed5126
 
+    & a
+      color: #262626
+    
+      &:hover
+        color: #ed5126
 
     &_orange
       color: #ed4d21
@@ -601,6 +605,7 @@ $_text: #979797
 
     &:hover
       color: #eb4b20
+
 //advance
 .advance
   background: url(../img/bg-mount.jpg) repeat top center scroll
@@ -644,9 +649,6 @@ $_text: #979797
     background-color: $_white
     color: #7c7c7c
 
-
-
-
   &__title
     font-family: Playball
     font-size: 22px
@@ -670,14 +672,18 @@ $_text: #979797
     flex-direction: row
 
   &__el
+    text-align: center
+    margin: 0 2px
+
+  &__link
+    display: block
+    color: #2e2e2e
     background-color: #141414
     border: 1px solid #2e2e2e
     border-radius: 100%
     width: 32px
     height: 32px
-    text-align: center
-    padding-top: 3px
-    margin: 0 2px
+    line-height: 32px
     transition: all 0.2s ease-in
 
     &:hover
@@ -685,13 +691,10 @@ $_text: #979797
       color: $_white
       border: 1px solid #ed5126
 
-  &__ico
-    color: #2e2e2e
-
 //payments
 .payments
   border-top: 1px solid #242424
-  margin-top: 80px
+  margin-top: 40px
   padding: 30px 0
 
   &__list
@@ -707,9 +710,12 @@ $_text: #979797
 
 //copyright
 .copyright
-  text-align: center
   background-color: #111111
-  padding: 30px 0
+
+  &__in
+    text-align: center
+    padding: 30px 0
+
 
   &__text
     color: #373737
@@ -775,13 +781,14 @@ $_text: #979797
     font-size: 16px
     text-transform: uppercase
     font-weight: bold
-    margin: 70px 0 0 0
+    margin: 70px 0 23px 0
 
   &__link
     color: $_text
     text-decoration: none
     font-family: Roboto
     font-size: 15px
+    line-height: 1.8
 
     &:hover
       color: $_white
@@ -793,9 +800,13 @@ $_text: #979797
 
 //.found-bike
 .found-bike
-  display: flex
-  flex-direction: row
-  justify-content: space-around
+  background-color: #2C2C2C
+
+  &__in
+    padding: 45px 0 45px
+    display: flex
+    flex-direction: row
+    justify-content: space-between
 
   &__title
     font-family: 'lato'
@@ -812,6 +823,9 @@ $_text: #979797
 
 //logo
 .logo
+
+  &_footer
+    padding: 67px 0 0 0
 
   &__descr
     color: $_text
@@ -859,6 +873,7 @@ $_text: #979797
 .news
   background-color: #F7F7F7
   font-family: 'lato'
+  padding-top: 60px
 
   &__left
     width: 20%
@@ -945,6 +960,7 @@ $_text: #979797
     &:hover
       color: #222
       padding-left: 5px
+
 
 
 

@@ -15,8 +15,7 @@ block content
 						li.user-menu__el.border-right english
 				.user-menu__right
 					ul.user-menu__list
-						li.user-menu__el
-							a.user-menu__link my account
+						li.user-menu__el my account
 						li.user-menu__el my cart
 							span.user-menu__count 0
 						li.user-menu__el.border-right checkout
@@ -98,28 +97,47 @@ block content
 				p.section-title__descr Search by type of
 				i.section-title__ico.fa.fa-angle-double-down
 
-	main.main
-		section.new-arrivals
+		//BEGIN promotion
+		section.promotion
+			img(src="/img/promotion_1.jpg")
+			.promotion__descr.promotion__descr_left
+				h5.promotion__title Waterproof Jacket
+				span.promotion__price men
+					span.promotion__price.promotion__price_orange $350
+				ul.promotion__list
+					li.promotion__el Integrated i-Lume LED rear light
+					li.promotion__el Optional hood available separately
+					li.promotion__el Breathability rating 15,000
+			//.promotion__discount Discount up to 75%
+			img(src="/img/promotion_2.jpg")
+			.promotion__descr.promotion__descr_right
+				h5.promotion__title Waterproof Jacket
+				span.promotion__price women
+					span.promotion__price.promotion__price_orange $250
+				ul.promotion__list
+					li.promotion__el Integrated i-Lume LED rear light
+					li.promotion__el Optional hood available separately
+					li.promotion__el Breathability rating 15,000
+		//END promotion
+
+		//BEGIN items
+		section.items
 			.section-title
 				h2.section-title__text.section-title__text_orange new
 					span.section-title__text arrivals
 				p.section-title__descr Trending Products
-
-		.filter-menu
-			ul.filter-menu__list
-				li.filter-menu__el
-					span.filter-menu__text.filter-menu__text_active clothing
-				li.filter-menu__el
-					span.filter-menu__text bikes
-				li.filter-menu__el
-					span.filter-menu__text components
-				li.filter-menu__el
-					span.filter-menu__text accessories
-				li.filter-menu__el
-					span.filter-menu__text protections
-
-	main
-		.items
+			.filter-menu
+				ul.filter-menu__list
+					li.filter-menu__el
+						span.filter-menu__text.filter-menu__text_active clothing
+					li.filter-menu__el
+						span.filter-menu__text bikes
+					li.filter-menu__el
+						span.filter-menu__text components
+					li.filter-menu__el
+						span.filter-menu__text accessories
+					li.filter-menu__el
+						span.filter-menu__text protections
 			ul.items__list
 				li.items__el
 					.item
@@ -210,30 +228,25 @@ block content
 							p
 								span.item__price.item__price_new $98.00
 								span.item__price.item__price_old $122.00
+		//END items
+		section.featured-product
+			.section-title
+				h2.section-title__text Featured products
+				p.section-title__descr Our featured products here
 
-		//BEGIN promotion
-		section
-			.promotion
-				img(src="/img/promotion_1.jpg")
-				.promotion__descr.promotion__descr_left
-					h5.promotion__title Waterproof Jacket
-					span.promotion__price men
-						span.promotion__price.promotion__price_orange $350
-					ul.promotion__list
-						li.promotion__el Integrated i-Lume LED rear light
-						li.promotion__el Optional hood available separately
-						li.promotion__el Breathability rating 15,000
-				//.promotion__discount Discount up to 75%
-				img(src="/img/promotion_2.jpg")
-				.promotion__descr.promotion__descr_right
-					h5.promotion__title Waterproof Jacket
-					span.promotion__price women
-						span.promotion__price.promotion__price_orange $250
-					ul.promotion__list
-						li.promotion__el Integrated i-Lume LED rear light
-						li.promotion__el Optional hood available separately
-						li.promotion__el Breathability rating 15,000
-		//END promotion
+		//BEGIN found-bike
+		section.found-bike
+			.found-bike__in.container
+				.found-bike__left
+					h5.found-bike__title Found your
+						span.found-bike__orange Dream Bike
+						|? Why wait
+					p.found-bike__descr Get it now with a 0% finance deal from GoShop Fashion..
+				.found-bike__right
+					.found-bike__action
+						span.btn.btn_gray discover
+						span.btn Purchase
+		//END found-bike
 
 		//BEGIN offers
 		section.offers.container
@@ -388,8 +401,6 @@ block content
 		//END news
 
 
-
-
 		//BEGIN address
 		section.address
 			.contacts
@@ -426,7 +437,7 @@ block content
 		.footer.footer__in.container
 			.footer__row
 				.footer__col
-					.logo
+					.logo.logo_footer
 						a.logo__link(href="#")
 							img(src="img/logo-footer.png")
 						.logo__descr
@@ -434,19 +445,19 @@ block content
 					.social
 						ul.social__list
 							li.social__el
-								a(href="#").social_link
+								a(href="#").social__link
 									i.social__ico.fa.fa-twitter
 							li.social__el
-								a(href="#").social_link
+								a(href="#").social__link
 									i.social__ico.fa.fa-facebook
 							li.social__el
-								a(href="#").social_link
+								a(href="#").social__link
 									i.social__ico.fa.fa-youtube-play
 							li.social__el
-								a(href="#").social_link
+								a(href="#").social__link
 									i.social__ico.fa.fa-github
 							li.social__el
-								a(href="#").social_link
+								a(href="#").social__link
 									i.social__ico.fa.fa-behance
 				.footer__col
 					.vertical-list
@@ -479,7 +490,7 @@ block content
 						h4.vertical-list__title newsletter
 						ul.vertical-list__item
 							li.vertical-list__el
-								p.fvertical-list__text Lorem ipsum dolor sit amet conseret adipiscing elit sed diam nonunem.
+								p.vertical-list__text Lorem ipsum dolor sit amet conseret adipiscing elit sed diam nonunem.
 							li.vertical-list__el
 								form.subscribe.subscribe_footer
 									.subscribe__field
@@ -514,12 +525,12 @@ block content
 						li.payments__el
 							a(href="#").payments__link
 								img(src="img/payment-8.png")
-			.footer__row
-				.copyright
-					span.copyright__text Powered By
-						a(href="#").copyright__link OpenCart
-					span.copyright__text Your Store 2016
 	//END footer
+	section.copyright
+		.copyright__in.container
+			span.copyright__text Powered By
+				a(href="#").copyright__link OpenCart
+			span.copyright__text Your Store 2016
 
 
 
