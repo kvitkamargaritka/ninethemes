@@ -1,8 +1,12 @@
 
 //container
 .container
-  max-width: 958px
+  max-width: 1170px
   margin: 0 auto
+  +r(1280)
+    max-width: 958px
+
+
 
 //atom
 .atom
@@ -113,7 +117,6 @@
   font-size: 14px
   font-weight: 500
   text-transform: uppercase
-  padding: 10px 32px
   border-radius: 30px
   transition: all 0.2s ease-in
   cursor: pointer
@@ -123,6 +126,10 @@
 
   &:focus
     outline: none
+
+  &_std
+    padding: 10px 32px
+    border: 1px solid transparent
 
   &_subscribe
     padding: 10px 170px
@@ -139,6 +146,7 @@
 
   &_gray
     background-color: $_grey-btn
+    padding: 10px 32px
     color: #999
     border: 1px solid #666
     margin: 0 30px
@@ -188,6 +196,9 @@
     background-color: #ee4415
     padding: 0
     border-radius: 0
+    
+  &_find
+    padding: 15px 35px
 
 //btn-group
 .btn-group
@@ -358,6 +369,26 @@
       flex-wrap: wrap
       text-align: center
 
+//choose-bike
+.choose-bike
+  background: url(../img/bg-mount.jpg) repeat top center scroll
+
+//product
+.product
+
+  &__img
+    display: block
+    
+  &__link
+    color: #1f1f1f
+    font-family: Roboto
+    font-size: 24px
+    font-weight: 800
+    text-transform: uppercase
+
+  &:hover
+    color: #eb4b20
+
 //section-title
 .section-title
   background: url(../img/bg-heading.png) no-repeat top
@@ -520,6 +551,11 @@
     top: 412px
     right: 221px
 
+  &__btn
+    position: absolute
+    top: 500px
+    right: 375px
+
 //offers
 .offers
 
@@ -618,6 +654,32 @@
   flex-direction: row
   position: relative
 
+  &__left
+    display: flex
+    justify-content: flex-end
+    width: 50%
+    background: #f8f8f8 url(../img/promotion_1.jpg) bottom right no-repeat
+
+  &__right
+    display: flex
+    justify-content: flex-start
+    width: 50%
+    background: #f0f0f0 url(../img/promotion_2.jpg) bottom right no-repeat
+
+  &__center
+    position: absolute
+    top: 50%
+    left: 42%
+    padding: 10px 30px
+    border-radius: 40px
+    font-family: Roboto
+    font-size: 14px
+    font-weight: 500
+    text-transform: uppercase
+    transform: rotate(-90deg)
+    background-color: $_white
+    color: #7c7c7c
+
   &__list
     margin: 27px 0 0 0
 
@@ -628,26 +690,11 @@
       content: "•"
       padding-right: 3px
 
+  &__img
+    width: 100%
+
   &__descr
-    position: absolute
-    top: 70px
-    left: 250px
-
-    &_left
-      left: 300px
-    &_right
-      left: 650px
-
-  &__descount
-    position: absolute
-    top: 0
-    left: 50%
-    font-family: Roboto
-    font-size: 14px
-    font-weight: 500
-    text-transform: uppercase
-    background-color: $_white
-    color: #7c7c7c
+    padding: 143px 80px
 
   &__title
     font-family: Playball
@@ -661,7 +708,32 @@
 
     &_orange
       color: #eb4b20
+      font-family: Roboto Slab
       font-size: 38px
+      font-weight: 300
+
+  &__buttons
+    font-size: 14px
+    font-weight: bold
+    color: #1e1e1e
+    text-transform: uppercase
+    padding-top: 47px
+
+    & li
+      display: inline-block
+      border-left: 1px solid #ddd
+
+      &:first-child
+        border: none
+
+    & span
+      padding: 7px 15px
+      cursor: pointer
+      transition: all 0.2s ease-in
+
+      &:hover
+        color: #eb4b20
+
 
 //social
 .social
@@ -807,6 +879,7 @@
     display: flex
     flex-direction: row
     justify-content: space-between
+    align-items: baseline
 
   &__title
     font-family: 'lato'
@@ -845,22 +918,25 @@
     width: 25%
 
 //address
-.address
-  background: url(../img/bg-contacts.jpg) no-repeat top right scroll
+
 
 //contacts
 .contacts
-  text-align: center
-  max-width: 800px
-  background: rgba(20, 20, 20, .97)
-  color: #999
-  font-size: 17px
-  line-height: 1.9
-  margin: 81px auto 69px auto
-  padding: 80px 30px
+  background: url(../img/bg-contacts.jpg) no-repeat top right scroll
+  padding-top: 10px
+
+  &__in
+    text-align: center
+    max-width: 800px
+    background: rgba(20, 20, 20, .97)
+    color: #999
+    font-size: 17px
+    line-height: 1.9
+    margin: 81px auto 69px auto
+    padding: 80px 30px
 
   & img
-    margin: 30px 0 10px
+    margin: 25px 0 10px
 
   & h5
     color: $_white
