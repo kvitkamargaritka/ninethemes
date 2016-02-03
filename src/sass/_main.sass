@@ -187,6 +187,20 @@
     color: $_white
     background: $_orange-btn
 
+  &_shopping-cart
+    color: $_white
+    background: transparent
+    width: 40px
+    height: 40px
+    border: 1px solid #fff
+    border-radius: 100%
+    font-size: 16px
+    padding: 7px 0 0 0
+
+    &:hover
+      color: $_black
+      background-color: $_white
+
   &_mail
     width: 34px
     height: 34px
@@ -1073,6 +1087,41 @@
     transition: all 0.2s ease-in
     background: rgba(238, 78, 34, .93)
     display: none
+
+  &__info
+    position: absolute
+    padding: 0
+    top: 50%
+    margin-top: -65px
+    text-align: center
+    left: 20px
+    right: 20px
+    color: #ff0000
+
+  &__brand
+    font-family: Playball
+    font-size: 22px
+    padding-top: 15px
+    color: $_white
+
+  &__model
+    font-family: "Roboto Slab"
+    font-size: 24px
+    text-transform: uppercase
+    color: $_white
+
+  &__price
+    font-family: "Roboto Slab"
+    font-size: 15px
+    padding-top: 6px
+    color: $_white
+
+//timer
+.timer
+  background: url("../img/bg-timer.jpg") no-repeat top center scroll
+  height: 1192px
+  margin-top: 30px
+
 
 
 

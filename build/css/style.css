@@ -105,6 +105,8 @@ a { text-decoration: none; }
 .btn_white { width: 50px; height: 50px; -webkit-border-radius: 0; border-radius: 0; background-color: #fff; color: #000; padding: 0; text-align: center; line-height: 50px; font-size: 16px; }
 .btn_white:hover { background-color: #ee4415; color: #fff; }
 .btn_cart { color: #fff; background: #ef4416; }
+.btn_shopping-cart { color: #fff; background: transparent; width: 40px; height: 40px; border: 1px solid #fff; -webkit-border-radius: 100%; border-radius: 100%; font-size: 16px; padding: 7px 0 0 0; }
+.btn_shopping-cart:hover { color: #000; background-color: #fff; }
 .btn_mail { width: 34px; height: 34px; background-color: #ee4415; padding: 0; -webkit-border-radius: 0; border-radius: 0; }
 .btn_find { padding: 15px 35px; }
 
@@ -303,14 +305,25 @@ a { text-decoration: none; }
 .featured-product__item:hover .featured-product__descr { display: block; }
 .featured-product__img img { display: block; width: 100%; height: 100%; }
 .featured-product__descr { position: absolute; top: 0; left: 0; right: 0; bottom: 0; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in; background: rgba(238, 78, 34, 0.93); display: none; }
+.featured-product__info { position: absolute; padding: 0; top: 50%; margin-top: -65px; text-align: center; left: 20px; right: 20px; color: #ff0000; }
+.featured-product__brand { font-family: Playball; font-size: 22px; padding-top: 15px; color: #fff; }
+.featured-product__model { font-family: "Roboto Slab"; font-size: 24px; text-transform: uppercase; color: #fff; }
+.featured-product__price { font-family: "Roboto Slab"; font-size: 15px; padding-top: 6px; color: #fff; }
+
+.timer { background: url("../img/bg-timer.jpg") no-repeat top center scroll; height: 1192px; margin-top: 30px; }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
+
 @media only screen and (max-width: 1280px){
  .container{ max-width: 958px; } }
+
 @media only screen and (max-width: 1270px){
  .item-banner__descr{ top: 50px; } }
+
 @media only screen and (max-width: 1155px){
  .items__list{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; } }
+
 @media only screen and (max-width: 1024px){
  .general-menu{ display: none; }
  .btn_nav{ display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
@@ -320,11 +333,13 @@ a { text-decoration: none; }
  .item-banner__title{ font-size: 30px; }
  .item-banner__price{ font-size: 22px; }
  .promo{ width: 100%; } }
+
 @media only screen and (max-width: 920px){
  .item-banner__descr{ top: 30px; }
  .item-banner__descr_center{ right: 20px; }
  .item-banner__descr_right{ left: 20px; }
  .item-banner__text{ margin-bottom: 20px; } }
+
 @media only screen and (max-width: 768px){
  .logo{ margin-bottom: 15px; }
  .header__left{ width: 100%; }
@@ -334,6 +349,7 @@ a { text-decoration: none; }
  .item-banner__el{ width: 100%; }
  .item-banner__descr{ top: 70px; right: 40px; }
  .item-banner__text{ margin-bottom: 50px; } }
+
 @media only screen and (max-width: 610px){
  .user-menu{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
  .user-menu__el{ border: none; } }
