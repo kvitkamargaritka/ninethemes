@@ -6,8 +6,6 @@
   +r(1280)
     max-width: 958px
 
-
-
 //atom
 .atom
   border: 1px solid #ccc
@@ -21,7 +19,6 @@
 //top-line
 .top-line
   background: #272727
-
 
 //user-menu
 .user-menu
@@ -270,7 +267,7 @@
 //newsletter
 .newsletter
   position: relative
-  background-image: url(../img/bg_newsletter.jpg)
+  background-image: url("../img/bg_newsletter.jpg")
   width: 870px
   color: $_white
   padding: 50px 60px
@@ -371,7 +368,8 @@
 
 //choose-bike
 .choose-bike
-  background: url(../img/bg-mount.jpg) repeat top center scroll
+  background: url("../img/bg-mount.jpg") repeat top center scroll
+  padding-top: 80px
 
 //product
 .product
@@ -391,7 +389,7 @@
 
 //section-title
 .section-title
-  background: url(../img/bg-heading.png) no-repeat top
+  background: url("../img/bg-heading.png") no-repeat top
   text-align: center
   padding: 40px 0 0 0
 
@@ -534,7 +532,7 @@
 
 //promo
 .promo
-  background-image: url(../img/promo_goshop_1.png)
+  background-image: url("../img/promo_goshop_1.png")
   height: 790px
   width: 100%
   position: relative
@@ -644,7 +642,7 @@
 
 //advance
 .advance
-  background: url(../img/bg-mount.jpg) repeat top center scroll
+  background: url("../img/bg-mount.jpg") repeat top center scroll
   height: 837px
   margin-top: 90px
 
@@ -658,13 +656,13 @@
     display: flex
     justify-content: flex-end
     width: 50%
-    background: #f8f8f8 url(../img/promotion_1.jpg) bottom right no-repeat
+    background: #f8f8f8 url("../img/promotion_1.jpg") bottom right no-repeat
 
   &__right
     display: flex
     justify-content: flex-start
     width: 50%
-    background: #f0f0f0 url(../img/promotion_2.jpg) bottom right no-repeat
+    background: #f0f0f0 url("../img/promotion_2.jpg") bottom right no-repeat
 
   &__center
     position: absolute
@@ -733,7 +731,6 @@
 
       &:hover
         color: #eb4b20
-
 
 //social
 .social
@@ -816,7 +813,7 @@
 
 //review
 .review
-  background: url(../img/bg-review.jpg) no-repeat top center scroll
+  background: url("../img/bg-review.jpg") no-repeat top center scroll
   height: 450px
 
   &__text
@@ -917,12 +914,9 @@
   &__col
     width: 25%
 
-//address
-
-
 //contacts
 .contacts
-  background: url(../img/bg-contacts.jpg) no-repeat top right scroll
+  background: url("../img/bg-contacts.jpg") no-repeat top right scroll
   padding-top: 10px
 
   &__in
@@ -995,7 +989,6 @@
     font-size: 15px
     padding: 12px 0 0 0
 
-
   &__tags
     padding: 2px 0 11px 0
 
@@ -1036,6 +1029,53 @@
     &:hover
       color: #222
       padding-left: 5px
+
+//featured-product
+.featured-product
+
+  &__in
+    display: flex
+    flex-direction: row
+    position: relative
+    padding: 65px 0 0 0
+
+  &__left
+    width: 25%
+
+  &__right
+    width: 75%
+    display: flex
+    flex-wrap: wrap
+
+  &__item
+    width: 33.33%
+    position: relative
+
+    &_big
+      width: 100%
+
+    &:hover .featured-product__descr
+      display: block
+
+  &__img
+
+    & img
+      display: block
+      width: 100%
+      height: 100%
+
+  &__descr
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    transition: all 0.2s ease-in
+    background: rgba(238, 78, 34, .93)
+    display: none
+
+
+
 
 
 
