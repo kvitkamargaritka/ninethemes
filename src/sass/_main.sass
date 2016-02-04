@@ -220,7 +220,6 @@
 
 //items
 .items
-  margin: 80px 0
 
   &__list
     display: flex
@@ -270,7 +269,7 @@
 
     &_old
       text-decoration: line-through
-      color: #929292
+      color: $_grayLight
 
   &__btn-group
     display: none
@@ -383,44 +382,63 @@
 //choose-bike
 .choose-bike
   background: url("../img/bg-mount.jpg") repeat top center scroll
-  padding-top: 80px
 
-//product
-.product
+  &__list
+    display: flex
+    flex-direction: row
+    height: 300px
+    position: relative
 
-  &__img
+  &__el
+    width: 150px
+
+  &__img img
     display: block
-    
+    max-width: 100%
+
   &__link
-    color: #1f1f1f
+    color: $_product
     font-family: Roboto
     font-size: 24px
     font-weight: 800
     text-transform: uppercase
 
-  &:hover
-    color: #eb4b20
+    &:hover
+      color: #eb4b20
+
+  &__text
+    color: $_text
+    font-size: 15px
+    font-family: Roboto
+
+    &_orange
+      color: #ed4d21
+
+  &__button
+    margin-top: 6px
+    text-align: center
 
 //section-title
 .section-title
   background: url("../img/bg-heading.png") no-repeat top
   text-align: center
-  padding: 40px 0 0 0
+  margin: 88px auto 60px
 
   &__text
     font-size: 34px
     font-weight: 800
     color: #202020
     text-transform: uppercase
+    padding-top: 30px
 
     &_orange
       color: $_orange
 
   &__descr
-    color: #929292
+    color: $_grayLight
     font-family: Playball
     font-size: 22px
-    padding-top: 9px
+    padding-top: 6px
 
   &__ico
     color: $_orange-btn
@@ -442,7 +460,7 @@
 
     &:before
       content: '•'
-      color: #929292
+      color: $_grayLight
       display: inline-block
       padding-top: 2px
       padding-left: 4px
@@ -450,13 +468,13 @@
 
   &__text
     text-transform: uppercase
-    color: #929292
+    color: $-grayLight
     font-size: 15px
     font-weight: 600
     cursor: pointer
 
     &_active
-      color: #1f1f1f
+      color: $_product
 
 //item-banner
 .item-banner
@@ -546,7 +564,7 @@
 
 //promo
 .promo
-  background-image: url("../img/promo_goshop_1.png")
+  background: url("../img/promo_goshop_1.png") top center no-repeat
   height: 790px
   width: 100%
   position: relative
@@ -556,17 +574,17 @@
   &__big
     position: absolute
     top: 197px
-    right: 205px
+    right: 346px
 
   &__small
     position: absolute
     top: 412px
-    right: 221px
+    right: 383px
 
   &__btn
     position: absolute
     top: 500px
-    right: 375px
+    right: 549px
 
 //offers
 .offers
@@ -665,18 +683,26 @@
   display: flex
   flex-direction: row
   position: relative
+  margin-top: 60px
+  +r(768)
+    flex-wrap: wrap
 
   &__left
     display: flex
     justify-content: flex-end
     width: 50%
     background: #f8f8f8 url("../img/promotion_1.jpg") bottom right no-repeat
+    +r(768)
+      width: 100%
+
 
   &__right
     display: flex
     justify-content: flex-start
     width: 50%
     background: #f0f0f0 url("../img/promotion_2.jpg") bottom right no-repeat
+    +r(768)
+      width: 100%
 
   &__center
     position: absolute
@@ -691,6 +717,8 @@
     transform: rotate(-90deg)
     background-color: $_white
     color: #7c7c7c
+    +r(1150)
+      display: none
 
   &__list
     margin: 27px 0 0 0
@@ -761,7 +789,7 @@
   &__link
     display: block
     color: #2e2e2e
-    background-color: #141414
+    background-color: $_footerBg
     border: 1px solid #2e2e2e
     border-radius: 100%
     width: 32px
@@ -791,9 +819,73 @@
     &:hover
       opacity: 1
 
+//owl-review
+.owl-review
+  position: relative
+
+  & .owl-controls
+
+    & .owl-buttons
+      position: absolute
+      top: 180px
+      left: -10px
+      right: -10px
+
+      & .owl-next, .owl-prev
+        position: absolute
+        top: 0
+        background: none
+
+      & .owl-next
+        right: 150px
+        &:before
+          content: '→'
+
+      & .owl-prev
+        left: 150px
+        &:before
+          content: '←'
+
+//owl-footer
+.owl-footer
+  border-top: 1px solid #242424
+  margin-top: 40px
+  padding: 30px 56px
+  position: relative
+
+  & .owl-controls
+
+    & .owl-buttons
+      position: absolute
+      top: 35px
+      left: -10px
+      right: -10px
+
+      & .owl-next, .owl-prev
+        position: absolute
+        top: 0
+        background: none
+
+      & .owl-prev
+        left: 0
+
+      & .owl-next
+        right: 0
+
+  &__item
+    display: flex
+    flex-direction: row
+
+  & img
+    opacity: 0.25
+    transition: all 0.2s ease-in
+
+    &:hover
+      opacity: 1
+
 //copyright
 .copyright
-  background-color: #111111
+  background-color: $_copyrightBg
 
   &__in
     text-align: center
@@ -812,6 +904,7 @@
 
 //partners
 .partners
+  background-color: rgba(0, 0, 0, 0.2)
 
   &__list
     display: flex
@@ -820,10 +913,14 @@
 
   &__el
     opacity: 0.3
-    border-right: 1px solid rgba(255, 255, 255, .09)
+    border-left: 1px solid rgba(255, 255, 255, .09)
+    padding: 0 30px
 
     &:hover
       opacity: 1
+
+    &:first-child
+      border: none
 
 //review
 .review
@@ -835,6 +932,7 @@
     text-align: center
     max-width: 800px
     padding: 0 50px
+    margin: 50px auto
 
 
   &__title
@@ -918,8 +1016,8 @@
 
 //footer
 .footer
-  background-color: #141414
-  color: #929292
+  background-color: $_footerBg
+  color: $_grayLight
 
   &__row
     display: flex
@@ -957,7 +1055,7 @@
 .news
   background-color: #F7F7F7
   font-family: 'lato'
-  padding-top: 60px
+  padding-top: 10px
 
   &__left
     width: 20%
@@ -1051,7 +1149,6 @@
     display: flex
     flex-direction: row
     position: relative
-    padding: 65px 0 0 0
 
   &__left
     width: 25%
@@ -1116,11 +1213,91 @@
     padding-top: 6px
     color: $_white
 
-//timer
-.timer
+//limited-time
+.limited-time
   background: url("../img/bg-timer.jpg") no-repeat top center scroll
-  height: 1192px
-  margin-top: 30px
+
+  &__btn
+    margin: 780px 0 92px 0
+
+//drop-down
+.drop-down
+  background: url("../img/dropdown-banner_2.jpg") no-repeat top right
+  width: 600px
+
+  &__title
+    display: block
+    font-size: 15px
+    font-weight: 800
+    text-transform: uppercase
+    border-bottom: 2px solid #ed5126
+    color: $_product
+    padding: 5px 0
+
+    &:hover
+      color: $_orange-btn
+
+    &:before
+      content: ''
+      width: 47px
+      height: 2px
+      background-color: $_orange-btn
+      position: absolute
+      bottom: 0
+
+  &__list
+    padding: 0 0 145px 0
+
+  &__el
+
+    & a
+      font-size: 15px
+      font-weight: 500
+      line-height: 1.6
+      color: #949494
+
+      &:hover
+        color: $_product
+
+//megamenu
+.megamenu
+  background: url("../img/dropdown-banner_1.jpg") no-repeat top right
+  width: 950px
+
+  &__title
+    display: block
+    font-size: 15px
+    font-weight: 800
+    text-transform: uppercase
+    //border-bottom: 2px solid #ed5126
+    color: $_product
+    padding: 5px 0
+
+    &:hover
+      color: $_orange-btn
+
+    &:before
+      content: ''
+      width: 47px
+      height: 2px
+      background-color: $_orange-btn
+      position: absolute
+      bottom: 0
+
+  &__list
+    padding: 0 0 145px 0
+
+  &__el
+
+    & a
+      font-size: 15px
+      font-weight: 500
+      line-height: 1.6
+      color: #949494
+
+      &:hover
+        color: $_product
+
 
 
 

@@ -57,7 +57,7 @@ block content
 				img(src="img/promo_goshop_3.png")
 			.promo__btn
 				a(href="#")
-					span.btn.btn_find find your bike
+					img(src="img/promo-btn.png")
 		//END promo
 
 		//BEGIN item-banner
@@ -90,22 +90,44 @@ block content
 
 	//BEGIN main
 	main.main
+
+		//BEGIN choose-bike
 		section.choose-bike
 			.section-title
 				h2.section-title__text choose your
 					span.section-title__text_orange  bike
 				p.section-title__descr Search by type of
 				i.section-title__ico.fa.fa-angle-double-down
-			.choose-bike__carousel
-				.carousel
-					div
-						.product
-							img(src="img/product_1.png").product__img
-							a(href="#").product__link Mountain bikes
-							p.product__price
-								span.product__text Start from
-								span.product__text.product__text_orange $599
-
+			.choose-bike__in.container
+				ul.choose-bike__list
+					li.choose-bike__el
+						.choose-bike__img
+							img(src="img/product_1.png")
+						.choose-bike__name
+							a(href="#").choose-bike__link Mountain bikes
+						p.choose-bike__price
+							span.choose-bike__text Start from
+							span.choose-bike__text.choose-bike__text_orange  $599
+					li.choose-bike__el
+						.choose-bike__img
+							img(src="img/product_02.png")
+						.choose-bike__name
+							a(href="#").choose-bike__link BMX bikes
+						p.choose-bike__price
+							span.choose-bike__text Start from
+							span.choose-bike__text.choose-bike__text_orange  $399
+					li.choose-bike__el
+						.choose-bike__img
+							img(src="img/product_03.png")
+						.choose-bike__name
+							a(href="#").choose-bike__link Road bikes
+						p.choose-bike__price
+							span.choose-bike__text Start from
+						span.choose-bike__text.choose-bike__text_orange  $299
+				.choose-bike__button
+					a(href="#")
+						span.btn.btn_std view all bikes
+		//END choose-bike
 
 		//BEGIN promotion
 		section.promotion
@@ -139,7 +161,6 @@ block content
 							span detail
 						li
 							span add to cart
-
 		//END promotion
 
 		//BEGIN items
@@ -347,13 +368,37 @@ block content
 		//END found-bike
 
 		//BEGIN timer
-		section.timer
-			.timer__in.container
+		section.limited-time
+			.limited-time__in.container
 				.section-title
 					h2.section-title__text carbon fiber
 						span.section-title__text_orange  cervelo
 					p.section-title__descr Limited time offer only on Go Shop
+				.limited-time__btn
+					span.btn.btn_std add to cart
 		//END timer
+
+		//BEGIN review
+		section.review
+			.review__in
+				.owl-review
+					.review__text
+						h2.review__title They says
+						span.review__happy Happy clients
+						p.review__descr "Cycling is a healthy , fun and exciting way to travel. No matter what type of cycling you’re into, we’ve got a bike for you. We stock one of the largest bicycle ranges anywhere”
+						span.review__author JESICA WILSON - France
+					.review__text
+						h2.review__title They says
+						span.review__happy Happy clients
+						p.review__descr "Cycling is a healthy , fun and exciting way to travel. No matter what type of cycling you’re into, we’ve got a bike for you. We stock one of the largest bicycle ranges anywhere”
+						span.review__author NINE-THMES - France
+					.review__text
+						h2.review__title They says
+						span.review__happy Happy clients
+						p.review__descr "Cycling is a healthy , fun and exciting way to travel. No matter what type of cycling you’re into, we’ve got a bike for you. We stock one of the largest bicycle ranges anywhere”
+						span.review__author ARTUR - France
+
+		//END review
 
 		//BEGIN offers
 		section.offers.container
@@ -439,7 +484,6 @@ block content
 								span Price:
 								span.offers__price.offers__price_new $299
 								span.offers__price.offers__price_old $599
-
 		//END offers
 
 		//BEGIN news
@@ -507,8 +551,7 @@ block content
 							span.news__more read more
 		//END news
 
-
-		//BEGIN address
+		//BEGIN contacts
 		section.contacts
 			.contacts__in
 				img(src="img/logo-footer.png")
@@ -518,25 +561,25 @@ block content
 				h5 Opening hours
 				p Monday to Wednesday from 10.00AM - 17.00PM
 				p Thursday to Sunday from 11.00AM - 19.00PM
-			.partners.container
-				ul.partners__list
-					li.partners__el
-						a(href="#").partners__link
-							img(src="img/brand1.png")
-					li.partners__el
-						a(href="#").partners__link
-							img(src="img/brand2.png")
-					li.partners__el
-						a(href="#").partners__link
-							img(src="img/brand3.png")
-					li.partners__el
-						a(href="#").partners__link
-							img(src="img/brand4.png")
-					li.partners__el
-						a(href="#").partners__link
-							img(src="img/brand5.png")
-		//END address
-
+			.partners
+				.partners__in.container
+					ul.partners__list
+						li.partners__el
+							a(href="#").partners__link
+								img(src="img/brand1.png")
+						li.partners__el
+							a(href="#").partners__link
+								img(src="img/brand2.png")
+						li.partners__el
+							a(href="#").partners__link
+								img(src="img/brand3.png")
+						li.partners__el
+							a(href="#").partners__link
+								img(src="img/brand4.png")
+						li.partners__el
+							a(href="#").partners__link
+								img(src="img/brand5.png")
+		//END contacts
 	//END main
 
 	//BEGIN footer
@@ -606,33 +649,32 @@ block content
 										button.btn.btn_mail(type="submit")
 											i.fa.fa-envelope
 			.footer__row
-				.payments
-					ul.payments__list
-						li.payments__el
-							a(href="#").payments__link
-								img(src="img/payment-1.png")
-						li.payments__el
-							a(href="#").payments__link
-								img(src="img/payment-2.png")
-						li.payments__el
-							a(href="#").payments__link
-								img(src="img/payment-3.png")
-						li.payments__el
-							a(href="#").payments__link
-								img(src="img/payment-4.png")
-						li.payments__el
-							a(href="#").payments__link
-								img(src="img/payment-5.png")
-						li.payments__el
-							a(href="#").payments__link
-								img(src="img/payment-6.png")
-						li.payments__el
-							a(href="#").payments__link
-								img(src="img/payment-7.png")
-						li.payments__el
-							a(href="#").payments__link
-								img(src="img/payment-8.png")
-	//END footer
+				div.owl-footer
+					div
+						a(href="#")
+							img(src="img/payment-1.png")
+					div
+						a(href="#")
+							img(src="img/payment-2.png")
+					div
+						a(href="#")
+							img(src="img/payment-3.png")
+					div
+						a(href="#")
+							img(src="img/payment-4.png")
+					div
+						a(href="#")
+							img(src="img/payment-5.png")
+					div
+						a(href="#")
+							img(src="img/payment-6.png")
+					div
+						a(href="#")
+							img(src="img/payment-7.png")
+					div
+						a(href="#")
+							img(src="img/payment-8.png")
+
 	section.copyright
 		.copyright__in.container
 			span.copyright__text Powered By

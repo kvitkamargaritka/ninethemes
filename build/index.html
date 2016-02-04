@@ -11,6 +11,8 @@
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Roboto:800,700,600,500,400,300">
     <link rel="stylesheet" media="all" href="http://fonts.googleapis.com/css?family=Playball:800,700,600,500,400,300">
     <!--css-->
+    <link rel="stylesheet" media="all" href="css/lib/owl.carousel.css">
+    <link rel="stylesheet" media="all" href="css/lib/owl.theme.css">
     <link rel="stylesheet" media="all" href="css/fonts/font-awesome/css/font-awesome.css">
     <link rel="stylesheet" media="all" href="css/style.css">
     <script src="js/app.js"></script>
@@ -64,7 +66,7 @@
         <div class="promo">
           <div class="promo__big"><img src="img/promo_goshop_2.png"></div>
           <div class="promo__small"><img src="img/promo_goshop_3.png"></div>
-          <div class="promo__btn"><a href="#"><span class="btn btn_find">find your bike</span></a></div>
+          <div class="promo__btn"><a href="#"><img src="img/promo-btn.png"></a></div>
         </div>
         <!--END promo-->
         <!--BEGIN item-banner-->
@@ -95,21 +97,34 @@
       <!--END header-->
       <!--BEGIN main-->
       <main class="main">
+        <!--BEGIN choose-bike-->
         <section class="choose-bike">
           <div class="section-title">
             <h2 class="section-title__text">choose your<span class="section-title__text_orange"> bike</span></h2>
             <p class="section-title__descr">Search by type of</p><i class="section-title__ico fa fa-angle-double-down"></i>
           </div>
-          <div class="choose-bike__carousel">
-            <div class="carousel">
-              <div>
-                <div class="product"><img src="img/product_1.png" class="product__img"><a href="#" class="product__link">Mountain bikes</a>
-                  <p class="product__price"><span class="product__text">Start from</span><span class="product__text product__text_orange">$599</span></p>
-                </div>
-              </div>
-            </div>
+          <div class="choose-bike__in container">
+            <ul class="choose-bike__list">
+              <li class="choose-bike__el">
+                <div class="choose-bike__img"><img src="img/product_1.png"></div>
+                <div class="choose-bike__name"><a href="#" class="choose-bike__link">Mountain bikes</a></div>
+                <p class="choose-bike__price"><span class="choose-bike__text">Start from</span><span class="choose-bike__text choose-bike__text_orange"> $599</span></p>
+              </li>
+              <li class="choose-bike__el">
+                <div class="choose-bike__img"><img src="img/product_02.png"></div>
+                <div class="choose-bike__name"><a href="#" class="choose-bike__link">BMX bikes</a></div>
+                <p class="choose-bike__price"><span class="choose-bike__text">Start from</span><span class="choose-bike__text choose-bike__text_orange"> $399</span></p>
+              </li>
+              <li class="choose-bike__el">
+                <div class="choose-bike__img"><img src="img/product_03.png"></div>
+                <div class="choose-bike__name"><a href="#" class="choose-bike__link">Road bikes</a></div>
+                <p class="choose-bike__price"><span class="choose-bike__text">Start from</span></p><span class="choose-bike__text choose-bike__text_orange"> $299</span>
+              </li>
+            </ul>
+            <div class="choose-bike__button"><a href="#"><span class="btn btn_std">view all bikes</span></a></div>
           </div>
         </section>
+        <!--END choose-bike-->
         <!--BEGIN promotion-->
         <section class="promotion">
           <div class="promotion__left">
@@ -329,15 +344,36 @@
         </section>
         <!--END found-bike-->
         <!--BEGIN timer-->
-        <section class="timer">
-          <div class="timer__in container">
+        <section class="limited-time">
+          <div class="limited-time__in container">
             <div class="section-title">
               <h2 class="section-title__text">carbon fiber<span class="section-title__text_orange"> cervelo</span></h2>
               <p class="section-title__descr">Limited time offer only on Go Shop</p>
             </div>
+            <div class="limited-time__btn"><span class="btn btn_std">add to cart</span></div>
           </div>
         </section>
         <!--END timer-->
+        <!--BEGIN review-->
+        <section class="review">
+          <div class="review__in">
+            <div class="owl-review">
+              <div class="review__text">
+                <h2 class="review__title">They says</h2><span class="review__happy">Happy clients</span>
+                <p class="review__descr">"Cycling is a healthy , fun and exciting way to travel. No matter what type of cycling you’re into, we’ve got a bike for you. We stock one of the largest bicycle ranges anywhere”</p><span class="review__author">JESICA WILSON - France</span>
+              </div>
+              <div class="review__text">
+                <h2 class="review__title">They says</h2><span class="review__happy">Happy clients</span>
+                <p class="review__descr">"Cycling is a healthy , fun and exciting way to travel. No matter what type of cycling you’re into, we’ve got a bike for you. We stock one of the largest bicycle ranges anywhere”</p><span class="review__author">NINE-THMES - France</span>
+              </div>
+              <div class="review__text">
+                <h2 class="review__title">They says</h2><span class="review__happy">Happy clients</span>
+                <p class="review__descr">"Cycling is a healthy , fun and exciting way to travel. No matter what type of cycling you’re into, we’ve got a bike for you. We stock one of the largest bicycle ranges anywhere”</p><span class="review__author">ARTUR - France</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--END review-->
         <!--BEGIN offers-->
         <section class="offers container">
           <div class="section-title">
@@ -485,8 +521,7 @@
           </ul>
         </section>
         <!--END news-->
-        
-        <!--BEGIN address-->
+        <!--BEGIN contacts-->
         <section class="contacts">
           <div class="contacts__in"><img src="img/logo-footer.png">
             <p>148 Parramatta Road Stanmore NSW 2048, New York City</p>
@@ -495,17 +530,19 @@
             <p>Monday to Wednesday from 10.00AM - 17.00PM</p>
             <p>Thursday to Sunday from 11.00AM - 19.00PM</p>
           </div>
-          <div class="partners container">
-            <ul class="partners__list">
-              <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand1.png"></a></li>
-              <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand2.png"></a></li>
-              <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand3.png"></a></li>
-              <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand4.png"></a></li>
-              <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand5.png"></a></li>
-            </ul>
+          <div class="partners">
+            <div class="partners__in container">
+              <ul class="partners__list">
+                <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand1.png"></a></li>
+                <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand2.png"></a></li>
+                <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand3.png"></a></li>
+                <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand4.png"></a></li>
+                <li class="partners__el"><a href="#" class="partners__link"><img src="img/brand5.png"></a></li>
+              </ul>
+            </div>
           </div>
         </section>
-        <!--END address-->
+        <!--END contacts-->
       </main>
       <!--END main-->
       <!--BEGIN footer-->
@@ -573,22 +610,19 @@
             </div>
           </div>
           <div class="footer__row">
-            <div class="payments">
-              <ul class="payments__list">
-                <li class="payments__el"><a href="#" class="payments__link"><img src="img/payment-1.png"></a></li>
-                <li class="payments__el"><a href="#" class="payments__link"><img src="img/payment-2.png"></a></li>
-                <li class="payments__el"><a href="#" class="payments__link"><img src="img/payment-3.png"></a></li>
-                <li class="payments__el"><a href="#" class="payments__link"><img src="img/payment-4.png"></a></li>
-                <li class="payments__el"><a href="#" class="payments__link"><img src="img/payment-5.png"></a></li>
-                <li class="payments__el"><a href="#" class="payments__link"><img src="img/payment-6.png"></a></li>
-                <li class="payments__el"><a href="#" class="payments__link"><img src="img/payment-7.png"></a></li>
-                <li class="payments__el"><a href="#" class="payments__link"><img src="img/payment-8.png"></a></li>
-              </ul>
+            <div class="owl-footer">
+              <div><a href="#"><img src="img/payment-1.png"></a></div>
+              <div><a href="#"><img src="img/payment-2.png"></a></div>
+              <div><a href="#"><img src="img/payment-3.png"></a></div>
+              <div><a href="#"><img src="img/payment-4.png"></a></div>
+              <div><a href="#"><img src="img/payment-5.png"></a></div>
+              <div><a href="#"><img src="img/payment-6.png"></a></div>
+              <div><a href="#"><img src="img/payment-7.png"></a></div>
+              <div><a href="#"><img src="img/payment-8.png"></a></div>
             </div>
           </div>
         </div>
       </footer>
-      <!--END footer-->
       <section class="copyright">
         <div class="copyright__in container"><span class="copyright__text">Powered By<a href="#" class="copyright__link">OpenCart</a></span><span class="copyright__text">Your Store 2016</span></div>
       </section>
