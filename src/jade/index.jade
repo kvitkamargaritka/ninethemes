@@ -11,14 +11,32 @@ block content
 			.user-menu
 				.user-menu__left
 					ul.user-menu__list
-						li.user-menu__el us dollar
-						li.user-menu__el.border-right english
+						li.user-menu__el
+							a(href="#").user-menu__link us dollar
+							.user-menu__dropdown
+								span Euro
+								span Pound Sterling
+								span US Dollar
+						li.user-menu__el.border-right
+							a(href="#").user-menu__link english
+							.user-menu__dropdown
+								span
+									i.ico.ico_british
+									| English
+								span
+									i.ico.ico_polsky
+									| Polsky
 				.user-menu__right
 					ul.user-menu__list
-						li.user-menu__el my account
-						li.user-menu__el my cart
-							span.user-menu__count 0
-						li.user-menu__el.border-right checkout
+						li.user-menu__el
+							a(href="#").user-menu__link my account
+						li.user-menu__el
+							a(href="#").user-menu__link my cart
+								span.user-menu__count 0
+							.user-menu__dropdown
+								p Your shopping cart is empty!
+						li.user-menu__el.border-right
+							a(href="#").user-menu__link checkout
 	//END top-line
 
 	//BEGIN header
@@ -29,14 +47,113 @@ block content
 					a(href="#").logo__link
 						img(src="img/logo-goshop.png")
 			.header__right
+				//BEGIN general-menu
 				nav.general-menu
 					ul.general-menu__list
 						li.general-menu__el
 							a.general-menu__link.general-menu__link_active home
 						li.general-menu__el
-							a.general-menu__link bike
+							a.general-menu__link bikes
+							//BEGIN general-menu__drop-down
+							.general-menu__drop-down.general-menu__drop-down_megamenu
+								.drop-down.drop-down_megamenu
+									.drop-down__item
+										h5.drop-down__title
+											a(href="#") phones & pdas
+										ul.drop-down__list
+											li.drop-down__el
+												a(href="#").drop-down__link Components
+											li.drop-down__el
+												a(href="#").drop-down__link Monitors
+											li.drop-down__el
+												a(href="#").drop-down__link Mice and Trackballs
+											li.drop-down__el
+												a(href="#").drop-down__link Mac
+											li.drop-down__el
+												a(href="#").drop-down__link MP3 Players
+											li.drop-down__el
+												a(href="#").drop-down__link Scanners
+											li.drop-down__el
+												a(href="#").drop-down__link Software
+									.drop-down__item
+										h5.drop-down__title
+											a(href="#") phones & pdas
+										ul.drop-down__list
+											li.drop-down__el
+												a(href="#").drop-down__link Components
+											li.drop-down__el
+												a(href="#").drop-down__link Monitors
+											li.drop-down__el
+												a(href="#").drop-down__link Mice and Trackballs
+											li.drop-down__el
+												a(href="#").drop-down__link Mac
+											li.drop-down__el
+												a(href="#").drop-down__link MP3 Players
+											li.drop-down__el
+												a(href="#").drop-down__link Scanners
+											li.drop-down__el
+												a(href="#").drop-down__link Software
+									.drop-down__item
+										h5.drop-down__title
+											a(href="#") phones & pdas
+										ul.drop-down__list
+											li.drop-down__el
+												a(href="#").drop-down__link Components
+											li.drop-down__el
+												a(href="#").drop-down__link Monitors
+											li.drop-down__el
+												a(href="#").drop-down__link Mice and Trackballs
+											li.drop-down__el
+												a(href="#").drop-down__link Mac
+											li.drop-down__el
+												a(href="#").drop-down__link MP3 Players
+											li.drop-down__el
+												a(href="#").drop-down__link Scanners
+											li.drop-down__el
+												a(href="#").drop-down__link Software
+									.drop-down__item
+										h5.drop-down__title
+											a(href="#") phones & pdas
+										ul.drop-down__list
+											li.drop-down__el
+												a(href="#").drop-down__link Components
+											li.drop-down__el
+												a(href="#").drop-down__link Monitors
+											li.drop-down__el
+												a(href="#").drop-down__link Mice and Trackballs
+											li.drop-down__el
+												a(href="#").drop-down__link Mac
+											li.drop-down__el
+												a(href="#").drop-down__link MP3 Players
+											li.drop-down__el
+												a(href="#").drop-down__link Scanners
+											li.drop-down__el
+												a(href="#").drop-down__link Software
+							//END general-menu__drop-down
 						li.general-menu__el
 							a.general-menu__link clothing
+							//BEGIN general-menu__drop-down
+							.general-menu__drop-down.general-menu__drop-down_clothing
+								.drop-down.drop-down_clothing
+									.drop-down__item
+										h5.drop-down__title
+											a(href="#") phones & pdas
+										ul.drop-down__list
+											li.drop-down__el
+												a(href="#").drop-down__link Components
+											li.drop-down__el
+												a(href="#").drop-down__link Monitors
+											li.drop-down__el
+												a(href="#").drop-down__link Mice and Trackballs
+											li.drop-down__el
+												a(href="#").drop-down__link Mac
+											li.drop-down__el
+												a(href="#").drop-down__link MP3 Players
+											li.drop-down__el
+												a(href="#").drop-down__link Scanners
+											li.drop-down__el
+												a(href="#").drop-down__link Software
+							//END general-menu__drop-down
 						li.general-menu__el
 							a.general-menu__link.general-menu__link_border components
 						li.general-menu__el
@@ -45,16 +162,28 @@ block content
 							a.general-menu__link.general-menu__link_border blog
 						li.general-menu__el
 							i.general-menu__ico.fa.fa-search
-				span.btn.btn_nav
-					i.fa.fa-reorder
-					|navigation
-
+				.nav-small
+					span.nav-small__btn
+						i.fa.fa-reorder
+						|navigation
+					ul.nav-small__dropdown
+						li
+							a(href="#") bikes
+						li
+							a(href="#") clothing
+						li
+							a(href="#") components
+						li
+							a(href="#") accessories
+						li
+							a(href="#") blog
+				//END general-menu
 		//BEGIN promo
 		.promo
 			.promo__big
 				img(src="img/promo_goshop_2.png")
-			.promo__small
-				img(src="img/promo_goshop_3.png")
+				.promo__small
+					img(src="img/promo_goshop_3.png")
 			.promo__btn
 				a(href="#")
 					img(src="img/promo-btn.png")
@@ -127,6 +256,12 @@ block content
 				.choose-bike__button
 					a(href="#")
 						span.btn.btn_std view all bikes
+				.roundabout__btns
+					.roundabout__btn.roundabout__btn_prev
+						i.fa.fa-angle-left
+					.roundabout__btn.roundabout__btn_next
+						i.fa.fa-angle-right
+
 		//END choose-bike
 
 		//BEGIN promotion
@@ -185,7 +320,7 @@ block content
 				li.items__el
 					.item
 						.item__top
-							a(href="#")
+							a(href="#").item__link
 								img(src="img/item_1.jpg").item__img
 							.item__btn-group
 								.btn-group
@@ -208,7 +343,7 @@ block content
 				li.items__el
 					.item
 						.item__top
-							a(href="#")
+							a(href="#").item__link
 								img(src="img/item_2.jpg").item__img
 							.item__btn-group
 								.btn-group
@@ -230,7 +365,7 @@ block content
 				li.items__el
 					.item
 						.item__top
-							a(href="#")
+							a(href="#").item__link
 								img(src="img/item_3.jpg").item__img
 							.item__btn-group
 								.btn-group
@@ -251,7 +386,7 @@ block content
 				li.items__el
 					.item
 						.item__top
-							a(href="#")
+							a(href="#").item__link
 								img(src="img/item_4.jpg").item__img
 							.item__btn-group
 								.btn-group
@@ -358,7 +493,7 @@ block content
 			.found-bike__in.container
 				.found-bike__left
 					h5.found-bike__title Found your
-						span.found-bike__orange Dream Bike
+						span.found-bike__orange  Dream Bike
 						|? Why wait
 					p.found-bike__descr Get it now with a 0% finance deal from GoShop Fashion..
 				.found-bike__right
@@ -369,13 +504,13 @@ block content
 
 		//BEGIN timer
 		section.limited-time
-			.limited-time__in.container
-				.section-title
-					h2.section-title__text carbon fiber
-						span.section-title__text_orange  cervelo
-					p.section-title__descr Limited time offer only on Go Shop
-				.limited-time__btn
-					span.btn.btn_std add to cart
+			.section-title
+				h2.section-title__text carbon fiber
+					span.section-title__text_orange  cervelo
+				p.section-title__descr Limited time offer only on Go Shop
+			.countdown
+			.limited-time__btn
+				span.btn.btn_std add to cart
 		//END timer
 
 		//BEGIN review
@@ -566,19 +701,19 @@ block content
 					ul.partners__list
 						li.partners__el
 							a(href="#").partners__link
-								img(src="img/brand1.png")
+								img(src="img/brand1.png").partners__img
 						li.partners__el
 							a(href="#").partners__link
-								img(src="img/brand2.png")
+								img(src="img/brand2.png").partners__img
 						li.partners__el
 							a(href="#").partners__link
-								img(src="img/brand3.png")
+								img(src="img/brand3.png").partners__img
 						li.partners__el
 							a(href="#").partners__link
-								img(src="img/brand4.png")
+								img(src="img/brand4.png").partners__img
 						li.partners__el
 							a(href="#").partners__link
-								img(src="img/brand5.png")
+								img(src="img/brand5.png").partners__img
 		//END contacts
 	//END main
 

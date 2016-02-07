@@ -1,4 +1,3 @@
-
 //container
 .container
   max-width: 1170px
@@ -16,6 +15,20 @@
 .border-right
   border-right: 1px solid #333
 
+.ico
+  display: inline-block
+  margin: 0 9px 0 0
+
+  &_british
+    background-image: url("../img/flag_british.png")
+    width: 16px
+    height: 11px
+
+  &_polsky
+    background-image: url("../img/flag_polsky.png")
+    width: 16px
+    height: 11px
+
 //top-line
 .top-line
   background: #272727
@@ -27,31 +40,63 @@
   flex-direction: row
   justify-content: space-between
   cursor: pointer
+  position: relative
   +r(610)
     flex-wrap: wrap
     justify-content: center
 
   &__el
     display: inline-flex
+    border-left: 1px solid #333
+    position: relative
+
+    &:hover .user-menu__dropdown
+      display: block
+
+    +r(610)
+      border: none
+
+  &__link
     color: $_grey
     font-family: 'lato'
     font-size: 14px
     text-transform: uppercase
     padding: 10px 20px
-    border-left: 1px solid #333
-    +r(610)
-      border: none
 
     &:hover
       color: $_orange
+      .user-menu__count
+        color: $_white
+        background-color: $_orange
 
   &__count
     display: inline-block
     margin-left: 6px
     padding: 0 6px 1px 6px
     border: 1px solid #333333
-    border-radius: 2px
+    border-radius: 3px
     transition: all 0.2s
+
+  &__dropdown
+    white-space: nowrap
+    position: absolute
+    left: -1px
+    top: 40px
+    background-color: $_white
+    padding: 15px 0
+    z-index: 2
+    border-radius: 2px
+    display: none
+
+    & p
+      padding: 0 20px
+
+    & span
+      display: block
+      padding: 3px 25px
+
+      &:hover
+        background-color: #f7f7f7
 
 //general-menu
 .general-menu
@@ -64,6 +109,11 @@
   &__el
     display: inline-flex
     margin-left: 33px
+    position: relative
+
+    &:hover
+      .general-menu__drop-down
+        display: flex
 
   &__link
     color: $_white
@@ -87,6 +137,20 @@
       &:hover
         border-bottom: 3px solid #ee4415
 
+  &__drop-down
+    position: absolute
+    z-index: 10
+
+    &_megamenu
+      top: 55px
+      left: -400px
+      display: none
+
+    &_clothing
+      top: 55px
+      left: -68px
+      display: none
+
   &__ico
     display: inline-block
     position: relative
@@ -97,13 +161,177 @@
     &:hover
       color: $_white
 
+//nav-small
+.nav-small
+  padding: 0 15px
+  display: none
+  +r(1024)
+    display: block
+
+  &__dropdown
+    background-color: $_white
+    display: none
+
+    & li
+      border-bottom: 1px solid #eee
+      text-transform: uppercase
+
+      &:hover
+        background-color: #f6f6f6
+
+      & a
+        display: block
+        padding: 10px 20px
+        color: $_black
+
+        &:hover
+          color: $_black
+
+  &__btn
+    display: block
+    font-size: 15px
+    text-transform: uppercase
+    cursor: pointer
+    width: 100%
+    color: $_white
+    background-color: $_orange
+    padding: 9px 14px
+    border-radius: 2px
+
+    &:hover
+      background-color: $_orange
+
+    & i
+      display: inline-block
+      margin-right: 5px
+
 //logo
 .logo
   +r(768)
     margin-bottom: 15px
   &__link
-    display: inline-block
+    display: block
 
+  &_footer
+    padding: 67px 0 0 0
+
+  &__descr
+    color: $_text
+    font-size: 15px
+    margin-top: 20px
+
+//promo
+.promo
+  background: url("../img/promo_goshop_1.png") top center no-repeat
+  height: 790px
+  width: 100%
+  position: relative
+
+  & a
+    display: block
+
+  &__big
+    position: absolute
+    top: 197px
+    left: 50%
+    margin-left: -290px
+
+  &__small
+    position: absolute
+    top: 220px
+    right: 35px
+
+  &__btn
+    position: absolute
+    bottom: 200px
+    right: 50%
+    margin-right: -100px
+
+//item-banner
+.item-banner
+
+  &__img
+    width: 100%
+    display: block
+
+  &__list
+    display: flex
+    flex-direction: row
+    +r(768)
+      flex-wrap: wrap
+
+  &__el
+    width: 33.333%
+    position: relative
+    +r(768)
+      width: 100%
+
+  &__descr
+    width: 220px
+    position: absolute
+    top: 105px
+    right: 32px
+    z-index: 2
+    +r(1270)
+      top: 50px
+    +r(920)
+      top: 30px
+    +r(768)
+      top: 70px
+      right: 40px
+
+    &_left
+      right: 40px
+      +r(1024)
+        right: 20px
+
+    &_center
+      right: 80px
+      +r(1024)
+        right: 40px
+      +r(920)
+        right: 20px
+
+    &_right
+      left: 45px
+      +r(920)
+        left: 20px
+
+  &__title
+    font-size: 39px
+    font-weight: 800
+    color: $_white
+    text-transform: uppercase
+    +r(1024)
+      font-size: 30px
+
+    &_color
+      color: #525a46
+
+  &__price
+    font-size: 31px
+    font-weight: 300
+    font-family: Roboto Slab
+    color: #eef1c9
+    margin-left: 7px
+    +r(1024)
+      font-size: 22px
+
+    &_orange
+      color: #f1613d
+
+  &__text
+    font-size: 17px
+    font-family: 'lato'
+    color: $_white
+    margin-bottom: 50px
+    +r(920)
+      margin-bottom: 20px
+    +r(768)
+      margin-bottom: 50px
+
+    &_color
+      color: #525a46
 
 //btn
 .btn
@@ -151,23 +379,6 @@
     &:hover
       background-color: #666
       color: $_white
-
-  &_nav
-    display: none
-    width: 100%
-    color: $_white
-    background-color: $_orange
-    padding: 9px 14px
-    border-radius: 2px
-    +r(1024)
-      display: flex
-
-    &:hover
-      background-color: $_orange
-
-    & i
-      display: inline-block
-      margin-right: 5px
 
   &_white
     width: 50px
@@ -220,6 +431,7 @@
 
 //items
 .items
+  margin-bottom: 30px
 
   &__list
     display: flex
@@ -239,6 +451,10 @@
   &:hover
     .item__btn-group
       display: block
+    .item__img
+      background-color: $_white
+      opacity: 0.3
+      border-bottom: 3px solid $_orange
 
   &__top
     margin-bottom: 20px
@@ -248,7 +464,11 @@
     text-align: center
 
   &__link
+    display: block
     text-decoration: none
+
+  &__img
+    border-bottom: 3px solid transparent
 
   &__title
     font-size: 17px
@@ -356,9 +576,6 @@
 //header
 .header
   background-color: $_dark-black
-  padding-top: 35px
-  +r(1024)
-    padding: 35px 15px
 
   &__left
     width: 30%
@@ -369,12 +586,16 @@
     width: 70%
     +r(768)
       width: 100%
+      justify-content: center
 
   &__in
+    padding-top: 30px
     display: flex
     flex-direction: row
     justify-content: space-between
-    align-items: center
+    align-items: flex-start
+    +r(1024)
+      padding: 35px 15px
     +r(768)
       flex-wrap: wrap
       text-align: center
@@ -476,115 +697,6 @@
     &_active
       color: $_product
 
-//item-banner
-.item-banner
-
-  &__img
-    width: 100%
-    display: block
-
-  &__list
-    display: flex
-    flex-direction: row
-    +r(768)
-      flex-wrap: wrap
-
-  &__el
-    width: 33.333%
-    position: relative
-    +r(768)
-      width: 100%
-
-  &__descr
-    width: 220px
-    position: absolute
-    top: 105px
-    right: 32px
-    z-index: 2
-    +r(1270)
-      top: 50px
-    +r(920)
-      top: 30px
-    +r(768)
-      top: 70px
-      right: 40px
-
-    &_left
-      right: 40px
-      +r(1024)
-        right: 20px
-
-    &_center
-      right: 80px
-      +r(1024)
-        right: 40px
-      +r(920)
-        right: 20px
-
-    &_right
-      left: 45px
-      +r(920)
-        left: 20px
-
-  &__title
-    font-size: 39px
-    font-weight: 800
-    color: $_white
-    text-transform: uppercase
-    +r(1024)
-      font-size: 30px
-
-    &_color
-      color: #525a46
-
-  &__price
-    font-size: 31px
-    font-weight: 300
-    font-family: Roboto Slab
-    color: #eef1c9
-    margin-left: 7px
-    +r(1024)
-      font-size: 22px
-
-    &_orange
-      color: #f1613d
-
-  &__text
-    font-size: 17px
-    font-family: 'lato'
-    color: $_white
-    margin-bottom: 50px
-    +r(920)
-      margin-bottom: 20px
-    +r(768)
-      margin-bottom: 50px
-
-    &_color
-      color: #525a46
-
-//promo
-.promo
-  background: url("../img/promo_goshop_1.png") top center no-repeat
-  height: 790px
-  width: 100%
-  position: relative
-  +r(1024)
-    width: 100%
-
-  &__big
-    position: absolute
-    top: 197px
-    right: 346px
-
-  &__small
-    position: absolute
-    top: 412px
-    right: 383px
-
-  &__btn
-    position: absolute
-    top: 500px
-    right: 549px
 
 //offers
 .offers
@@ -598,6 +710,8 @@
 
   &__el
     width: 33%
+    +r(1024)
+      width: 50%
 
   &__item
     display: flex
@@ -837,12 +951,12 @@
         background: none
 
       & .owl-next
-        right: 150px
+        right: 80px
         &:before
           content: '→'
 
       & .owl-prev
-        left: 150px
+        left: 80px
         &:before
           content: '←'
 
@@ -910,30 +1024,40 @@
     display: flex
     flex-direction: row
     justify-content: space-around
+    padding: 10px 0
 
   &__el
-    opacity: 0.3
     border-left: 1px solid rgba(255, 255, 255, .09)
     padding: 0 30px
 
-    &:hover
-      opacity: 1
-
     &:first-child
       border: none
+
+  &__img
+    opacity: 0.3
+    transition: all 0.2s ease-in
+
+    &:hover
+      opacity: 1
 
 //review
 .review
   background: url("../img/bg-review.jpg") no-repeat top center scroll
   height: 450px
+  +r(768)
+    display: none
+
+  &__in
+    padding-top: 50px
 
   &__text
     color: $_white
     text-align: center
-    max-width: 800px
-    padding: 0 50px
-    margin: 50px auto
-
+    max-width: 900px
+    padding: 0 90px
+    margin: 0 auto
+    +r(1024)
+      padding: 0 210px
 
   &__title
     font-size: 34px
@@ -943,7 +1067,7 @@
   &__happy
     font-family: Playball
     font-size: 22px
-    
+
   &__descr
     color: #dddddd
     font-size: 19px
@@ -989,6 +1113,17 @@
     flex-direction: row
     justify-content: space-between
     align-items: baseline
+    +r(1024)
+      padding-left: 20px
+      padding-right: 20px
+    +r(810)
+      flex-wrap: wrap
+      text-align: center
+
+  &__left, &__right
+    +r(810)
+      width: 100%
+      padding: 10px 0
 
   &__title
     font-family: 'lato'
@@ -1002,17 +1137,6 @@
   &__descr
     font-size: 17px
     color: #666666
-
-//logo
-.logo
-
-  &_footer
-    padding: 67px 0 0 0
-
-  &__descr
-    color: $_text
-    font-size: 15px
-    margin-top: 20px
 
 //footer
 .footer
@@ -1040,9 +1164,6 @@
     line-height: 1.9
     margin: 81px auto 69px auto
     padding: 80px 30px
-
-  & img
-    margin: 25px 0 10px
 
   & h5
     color: $_white
@@ -1123,6 +1244,8 @@
       color: #393939
       font-size: 19px
       line-height: 1.4
+      +r(1024)
+        font-size: 14px
 
       &:hover
         color: #ed5126
@@ -1144,6 +1267,8 @@
 
 //featured-product
 .featured-product
+  +r(768)
+    display: none
 
   &__in
     display: flex
@@ -1206,6 +1331,10 @@
     font-size: 24px
     text-transform: uppercase
     color: $_white
+    &:hover
+      color: $_white
+    +r(1110)
+      font-size: 15px
 
   &__price
     font-family: "Roboto Slab"
@@ -1215,88 +1344,116 @@
 
 //limited-time
 .limited-time
-  background: url("../img/bg-timer.jpg") no-repeat top center scroll
+  background: url("../img/bg-timer.jpg") top center no-repeat
+  text-align: center
 
   &__btn
-    margin: 780px 0 92px 0
+    padding: 840px 0 50px
+    text-align: center
+
+//countdown
+.countdown
+  text-align: center
+
+  &-section
+    padding: 10px 30px
+    border-right: 1px solid #ccc
+    +r(768)
+      padding: 5px 15px
+
+    &:last-child
+      border: none
+
+  &-amount
+    font-family: Roboto
+    font-size: 30px
+    font-weight: 400
+    margin-right: 2px
+    +r(768)
+      font-size: 20px
+
+  &-period
+    font-family: Roboto
+    color: $_orange
+    font-size: 14px
+    text-transform: uppercase
+    +r(768)
+      font-size: 10px
 
 //drop-down
 .drop-down
-  background: url("../img/dropdown-banner_2.jpg") no-repeat top right
-  width: 600px
+  display: flex
+  flex-direction: row
+  padding: 50px 30px
+  background-color: $_white
+  //
+  //&:hover
+  //  display: flex
 
-  &__title
-    display: block
+  &_megamenu
+    width: 1000px
+    background: $_white url("../img/dropdown-banner_1.jpg") no-repeat top right
+
+  &_clothing
+    width: 600px
+    background: $_white url("../img/dropdown-banner_2.jpg") no-repeat top right
+
+  &__item
+    margin: 0 30px
+
+  &__list
+    display: flex
+    flex-direction: column
+    padding: 10px 0
+
+  &__el
+    padding: 5px 0
+
+  &__title a
+    display: inline-block
     font-size: 15px
     font-weight: 800
     text-transform: uppercase
-    border-bottom: 2px solid #ed5126
+    border-bottom: 2px solid $_orange-btn
     color: $_product
-    padding: 5px 0
+    padding-bottom: 10px
 
     &:hover
       color: $_orange-btn
 
-    &:before
-      content: ''
-      width: 47px
-      height: 2px
-      background-color: $_orange-btn
-      position: absolute
-      bottom: 0
-
-  &__list
-    padding: 0 0 145px 0
-
-  &__el
-
-    & a
-      font-size: 15px
-      font-weight: 500
-      line-height: 1.6
-      color: #949494
-
-      &:hover
-        color: $_product
-
-//megamenu
-.megamenu
-  background: url("../img/dropdown-banner_1.jpg") no-repeat top right
-  width: 950px
-
-  &__title
-    display: block
-    font-size: 15px
-    font-weight: 800
-    text-transform: uppercase
-    //border-bottom: 2px solid #ed5126
-    color: $_product
-    padding: 5px 0
+  &__link
+    font-size: 14px
+    font-weight: 500
+    line-height: 1.6
+    color: #949494
 
     &:hover
-      color: $_orange-btn
+      color: #000
 
-    &:before
-      content: ''
-      width: 47px
-      height: 2px
-      background-color: $_orange-btn
-      position: absolute
-      bottom: 0
+    &:hover
+      color: $_product
 
-  &__list
-    padding: 0 0 145px 0
+//roundabout
+.roundabout
 
-  &__el
+  &__btns
+    position: relative
 
-    & a
-      font-size: 15px
-      font-weight: 500
-      line-height: 1.6
-      color: #949494
+  &__btn
+    position: absolute
+    top: -175px
+    padding: 5px 10px
+    border: 1px solid #f0f0f0
+    cursor: pointer
 
-      &:hover
-        color: $_product
+    &:hover
+      background-color: rgba(204,204,204,0.3)
+
+    &_prev
+      left: 0
+
+    &_next
+      right: 0
 
 
 
