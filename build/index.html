@@ -21,6 +21,23 @@
     <!--BEGIN out-->
     <div class="out">
       <!--| Just text-->
+      <!--BEGIN popup-->
+      <div class="popup">
+        <div class="popup__bg"></div>
+        <div class="newsletter">
+          <div class="newsletter__in">
+            <h1 class="newsletter__title">newsletter</h1>
+            <p class="newsletter__descr">Did you know that we ship to over<span class="newsletter__descr newsletter__descr_red"> 24 different countries</span></p>
+            <form class="subscribe subscribe_newsletter">
+              <div class="subscribe__field">
+                <input placeholder="Enter your email address" class="input input_block">
+              </div>
+              <div class="subscribe__action"><span class="btn btn_subscribe"><i class="fa fa-envelope"></i> Subscribe</span></div>
+            </form>
+          </div><span class="btn btn_close"><i class="fa fa-remove"></i></span>
+        </div>
+      </div>
+      <!--END popup-->
       <!--BEGIN top-line-->
       <div class="top-line">
         <div class="container">
@@ -607,7 +624,12 @@
               </div>
               <div class="news__right">
                 <div class="news__top">
-                  <div class="news__tags"><a href="#" class="news__link">Fastor</a><a href="#" class="news__link">Passion</a></div>
+                  <div class="news__tags">
+                    <ul>
+                      <li><a href="#" class="news__link">Fastor</a></li>
+                      <li><a href="#" class="news__link">Passion</a></li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="news__center">
                   <div class="news__descr"><a href="#">Etiam ac aliquet ex nec volutpat orci</a></div>

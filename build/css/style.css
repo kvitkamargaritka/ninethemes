@@ -44,6 +44,15 @@ a:hover { color: #ee4415; }
 .ico_british { background-image: url("../img/flag_british.png"); width: 16px; height: 11px; }
 .ico_polsky { background-image: url("../img/flag_polsky.png"); width: 16px; height: 11px; }
 
+.popup { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 400; }
+.popup__bg { background-color: #0f0f0f; opacity: 0.8; position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 40; }
+
+.newsletter { position: relative; background: url("../img/bg_newsletter.jpg") top center; width: 870px; color: #fff; padding: 50px 20px; margin: auto; z-index: 50; }
+.newsletter__in { text-align: center; padding: 95px 0 55px; }
+.newsletter__title { font-size: 48px; font-weight: bold; text-transform: uppercase; color: #fff; }
+.newsletter__descr { color: #fff; font-size: 15px; font-weight: bold; padding: 5px 0 0 0; }
+.newsletter__descr_red { color: #ee4415; font-weight: normal; }
+
 .top-line { background: #272727; }
 
 .user-menu { background: #272727; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; cursor: pointer; position: relative; }
@@ -108,8 +117,8 @@ a:hover { color: #ee4415; }
 .btn:hover { background: #1e1e1e; }
 .btn:focus { outline: none; }
 .btn_std { padding: 10px 32px; border: 1px solid transparent; }
-.btn_subscribe { padding: 10px 170px; text-transform: none; -webkit-border-radius: 0; border-radius: 0; }
-.btn_cross { position: absolute; top: 0; right: 0; -webkit-border-radius: 0; border-radius: 0; font-size: 25px; color: #fff; }
+.btn_subscribe { width: 100%; height: 40px; line-height: 40px; text-transform: none; -webkit-border-radius: 0; border-radius: 0; }
+.btn_close { padding: 2px 5px; position: absolute; top: 0; right: 0; -webkit-border-radius: 0; border-radius: 0; font-size: 22px; color: #fff; }
 .btn_gray { background-color: #2C2C2C; padding: 10px 32px; color: #999; border: 1px solid #666; margin: 0 30px; }
 .btn_gray:hover { background-color: #666; color: #fff; }
 .btn_white { width: 50px; height: 50px; -webkit-border-radius: 0; border-radius: 0; background-color: #fff; color: #000; padding: 0; text-align: center; line-height: 50px; font-size: 16px; }
@@ -140,17 +149,12 @@ a:hover { color: #ee4415; }
 .item__price_old { text-decoration: line-through; color: #929292; }
 .item__btn-group { display: none; position: absolute; top: 120px; left: 50px; }
 
-.newsletter { position: relative; background-image: url("../img/bg_newsletter.jpg"); width: 870px; color: #fff; padding: 50px 60px; margin: 40px 0; }
-.newsletter__in { text-align: center; padding: 95px 0 55px 0; }
-.newsletter__title { font-size: 48px; font-weight: bold; text-transform: uppercase; color: #fff; }
-.newsletter__descr { color: #fff; font-size: 15px; font-weight: bold; padding: 5px 0 0 0; }
-.newsletter__descr_red { color: #ee4415; font-weight: normal; }
-
 .input_footer { width: 215px; height: 35px; background-color: #0f0f0f; color: #999; font-family: "lato"; font-size: 13px; font-weight: 500; padding: 0 10px; -webkit-border-radius: 2px; border-radius: 2px; }
 .input:focus { outline: none; }
-.input__field { width: 400px; height: 40px; padding-left: 20px; border: 1px solid rgba(255, 255, 255, 0.3); background-color: #000; font-family: lato; font-size: 13px; font-weight: 500; color: #b6b6b6; }
+.input_block { width: 100%; height: 40px; padding-left: 20px; border: 1px solid rgba(255, 255, 255, 0.3); background-color: #000; font-family: lato; font-size: 13px; font-weight: 500; color: #b6b6b6; }
 
-.subscribe__field { margin: 50px 0; }
+.subscribe_newsletter { max-width: 400px; margin: 0 auto; }
+.subscribe__field { margin: 30px 0 15px 0; }
 .subscribe__action { margin: 20px 0; position: relative; }
 .subscribe_footer { position: relative; }
 .subscribe_footer .subscribe__action { position: absolute; top: -19px; right: 0; }
@@ -297,9 +301,9 @@ a:hover { color: #ee4415; }
 .news__center { padding-bottom: 12px; }
 .news__list { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; padding: 50px 0 168px; }
 .news__el { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; }
-.news__date { width: 60px; height: 60px; background-color: #ed5126; color: #fff; text-align: center; font-family: "Roboto Slab"; font-size: 19px; font-weight: bold; padding: 12px 0 0 0; }
+.news__date { width: 60px; height: 60px; background-color: #ed5126; color: #fff; text-align: center; font-family: "Roboto Slab"; font-size: 19px; font-weight: bold; padding: 7px 0 0; }
 .news__date p { text-transform: uppercase; font-size: 13px; font-weight: normal; }
-.news__comments { width: 60px; height: 60px; background-color: #222; color: #fff; text-align: center; font-family: "Roboto Slab"; font-size: 15px; padding: 12px 0 0 0; }
+.news__comments { width: 60px; height: 60px; background-color: #222; color: #fff; text-align: center; font-family: "Roboto Slab"; font-size: 15px; padding: 7px 0 0; }
 .news__tags { padding: 2px 0 11px 0; }
 .news__tags ul { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -webkit-flex-direction: row; -ms-flex-direction: row; flex-direction: row; }
 .news__tags ul li { margin-right: 10px; }
@@ -370,15 +374,29 @@ a:hover { color: #ee4415; }
  .item-banner__title{ font-size: 30px; }
  .item-banner__price{ font-size: 22px; }
  .header__in{ padding: 35px 15px; }
+ .offers__list{ margin: 0 30px; }
  .offers__el{ width: 50%; }
  .review__text{ padding: 0 210px; }
  .found-bike__in{ padding-left: 20px; padding-right: 20px; }
+ .footer__row{ padding: 0 20px; }
  .news__descr a{ font-size: 14px; } }
 @media only screen and (max-width: 920px){
  .item-banner__descr{ top: 30px; }
  .item-banner__descr_center{ right: 20px; }
  .item-banner__descr_right{ left: 20px; }
  .item-banner__text{ margin-bottom: 20px; } }
+@media only screen and (max-width: 900px){
+ .partners__list{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+ .partners__el{ border: none; }
+ .contacts{ background: #141414; }
+ .contacts__in{ max-width: 100%; } }
+@media only screen and (max-width: 870px){
+ .newsletter{ width: 100%; } }
+@media only screen and (max-width: 850px){
+ .footer__row{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+ .footer__col{ width: 50%; }
+ .news__left{ width: 30%; }
+ .news__right{ width: 70%; } }
 @media only screen and (max-width: 810px){
  .found-bike__in{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; text-align: center; }
  .found-bike__left, .found-bike__right{ width: 100%; padding: 10px 0; } }
@@ -399,9 +417,22 @@ a:hover { color: #ee4415; }
  .countdown-section{ padding: 5px 15px; }
  .countdown-amount{ font-size: 20px; }
  .countdown-period{ font-size: 10px; } }
+@media only screen and (max-width: 650px){
+ .newsletter__title{ font-size: 30px; }
+ .subscribe__action{ margin: 20px 0; }
+ .offers__list{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+ .offers__el{ width: 100%; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
+ .news__left{ width: 20%; }
+ .news__right{ width: 80%; }
+ .news__list{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+ .news__el{ width: 100%; padding: 20px; }
+ .news__descr a{ font-size: 19px; } }
 @media only screen and (max-width: 610px){
  .user-menu{ -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; }
  .user-menu__el{ border: none; } }
+@media only screen and (max-width: 500px){
+ .footer__row{ padding: 0 50px; }
+ .footer__col{ width: 100%; } }
 
 
 

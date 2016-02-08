@@ -4,6 +4,24 @@ block title
 	title Title of template
 
 block content
+	//BEGIN popup
+	.popup
+		.popup__bg
+		.newsletter
+			.newsletter__in
+				h1.newsletter__title newsletter
+				p.newsletter__descr Did you know that we ship to over
+					span.newsletter__descr.newsletter__descr_red  24 different countries
+				form.subscribe.subscribe_newsletter
+					.subscribe__field
+						input.input.input_block(placeholder="Enter your email address")
+					.subscribe__action
+						span.btn.btn_subscribe
+							i.fa.fa-envelope
+							|  Subscribe
+			span.btn.btn_close
+				i.fa.fa-remove
+	//END popup
 
 	//BEGIN top-line
 	.top-line
@@ -677,8 +695,11 @@ block content
 					.news__right
 						.news__top
 							.news__tags
-								a.news__link(href="#") Fastor
-								a.news__link(href="#") Passion
+								ul
+									li
+										a.news__link(href="#") Fastor
+									li
+										a.news__link(href="#") Passion
 						.news__center
 							.news__descr
 								a(href="#") Etiam ac aliquet ex nec volutpat orci

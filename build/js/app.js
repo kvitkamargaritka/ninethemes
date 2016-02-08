@@ -127,6 +127,10 @@ $(document).ready(function() {
         $('.nav-small__dropdown').fadeToggle();
     });
 
+    $('.btn_close').click(function(){
+        $('.popup').toggle();
+    });
+
     //owl-footer
     $('.owl-footer').owlCarousel({
         items : 7,
